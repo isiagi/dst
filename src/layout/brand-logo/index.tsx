@@ -19,7 +19,7 @@ export function BrandLogo() {
         priority
       />
       <Image
-        className="logo-dark hidden dark:block"
+        className="logo-dark hidden w-[8.5rem] dark:block"
         src={logoDark.src}
         width={logoDark.width}
         height={logoDark.height}
