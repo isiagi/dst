@@ -8,7 +8,7 @@ export function BrandLogo() {
   return (
     <CustomLink href="/">
       <Image
-        className="logo-light w-[8.5rem] dark:hidden"
+        className="logo-dark w-[8.5rem] dark:hidden"
         src={logoLight.src}
         width={logoLight.width}
         height={logoLight.height}
