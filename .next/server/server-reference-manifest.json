@@ -2,20 +2,10 @@
   "node": {
     "da025d4d811fadb44ae1298c511f3e2ba30487f8": {
       "workers": {
-        "app/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fisiagi%2FDocuments%2Ftechlab-next%2Fsrc%2Flayout%2Fheader%2Fdesktop%2Fv2%2Foff-canvas%2Fform%2Fserver%2Fcontact-us-form-submit.ts%22%2C%5B%22contactUsFormSubmit%22%5D%5D%2C%5B%22%2Fhome%2Fisiagi%2FDocuments%2Ftechlab-next%2Fsrc%2Fsections%2Fcontact%2Fv1%2Fform%2Fserver%2Fcontact-us-form-submit.ts%22%2C%5B%22contactUsFormSubmit%22%5D%5D%5D&__client_imported__=true!",
-        "app/about/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fisiagi%2FDocuments%2Ftechlab-next%2Fsrc%2Flayout%2Fheader%2Fdesktop%2Fv2%2Foff-canvas%2Fform%2Fserver%2Fcontact-us-form-submit.ts%22%2C%5B%22contactUsFormSubmit%22%5D%5D%5D&__client_imported__=true!",
-        "app/services/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fisiagi%2FDocuments%2Ftechlab-next%2Fsrc%2Flayout%2Fheader%2Fdesktop%2Fv2%2Foff-canvas%2Fform%2Fserver%2Fcontact-us-form-submit.ts%22%2C%5B%22contactUsFormSubmit%22%5D%5D%5D&__client_imported__=true!",
-        "app/services/[id]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fisiagi%2FDocuments%2Ftechlab-next%2Fsrc%2Flayout%2Fheader%2Fdesktop%2Fv2%2Foff-canvas%2Fform%2Fserver%2Fcontact-us-form-submit.ts%22%2C%5B%22contactUsFormSubmit%22%5D%5D%5D&__client_imported__=true!",
-        "app/blog/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fisiagi%2FDocuments%2Ftechlab-next%2Fsrc%2Flayout%2Fheader%2Fdesktop%2Fv2%2Foff-canvas%2Fform%2Fserver%2Fcontact-us-form-submit.ts%22%2C%5B%22contactUsFormSubmit%22%5D%5D%5D&__client_imported__=true!",
-        "app/contact/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fisiagi%2FDocuments%2Ftechlab-next%2Fsrc%2Flayout%2Fheader%2Fdesktop%2Fv2%2Foff-canvas%2Fform%2Fserver%2Fcontact-us-form-submit.ts%22%2C%5B%22contactUsFormSubmit%22%5D%5D%2C%5B%22%2Fhome%2Fisiagi%2FDocuments%2Ftechlab-next%2Fsrc%2Fsections%2Fcontact%2Fv2%2Fform%2Fserver%2Fcontact-us-form-submit.ts%22%2C%5B%22contactUsFormSubmit%22%5D%5D%5D&__client_imported__=true!"
+        "app/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fisiagi%2FDocuments%2Ftechlab-next%2Fsrc%2Flayout%2Fheader%2Fdesktop%2Fv2%2Foff-canvas%2Fform%2Fserver%2Fcontact-us-form-submit.ts%22%2C%5B%22contactUsFormSubmit%22%5D%5D%2C%5B%22%2Fhome%2Fisiagi%2FDocuments%2Ftechlab-next%2Fsrc%2Fsections%2Fcontact%2Fv1%2Fform%2Fserver%2Fcontact-us-form-submit.ts%22%2C%5B%22contactUsFormSubmit%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
-        "app/page": "action-browser",
-        "app/about/page": "action-browser",
-        "app/services/page": "action-browser",
-        "app/services/[id]/page": "action-browser",
-        "app/blog/page": "action-browser",
-        "app/contact/page": "action-browser"
+        "app/page": "action-browser"
       }
     },
     "51d067570d5b9c821807c947888f78498c1c98dc": {
@@ -25,16 +15,8 @@
       "layer": {
         "app/page": "action-browser"
       }
-    },
-    "35ea3b09666f6907f881d57788931d6b0fcf3ddf": {
-      "workers": {
-        "app/contact/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fisiagi%2FDocuments%2Ftechlab-next%2Fsrc%2Flayout%2Fheader%2Fdesktop%2Fv2%2Foff-canvas%2Fform%2Fserver%2Fcontact-us-form-submit.ts%22%2C%5B%22contactUsFormSubmit%22%5D%5D%2C%5B%22%2Fhome%2Fisiagi%2FDocuments%2Ftechlab-next%2Fsrc%2Fsections%2Fcontact%2Fv2%2Fform%2Fserver%2Fcontact-us-form-submit.ts%22%2C%5B%22contactUsFormSubmit%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/contact/page": "action-browser"
-      }
     }
   },
   "edge": {},
-  "encryptionKey": "xwPr//zdPR+ZI7aGEzIQzAg8DAJHMzI1nhzFIjvgNAI="
+  "encryptionKey": "TrJ/v168VK7YBXHRrl7YFLmHqN+VoxJHVmmkzpsS26s="
 }
