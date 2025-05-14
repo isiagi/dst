@@ -10,7 +10,7 @@ export interface CtaSectionProps {
 }
 
 const ctaSectionData: CtaSectionProps = {
-  title: 'Have question? Feel Free To Ask',
+  title: 'Have question? Feel Free To Ask....',
 };
 
 export function CtaSection({ className }: SectionProps) {
