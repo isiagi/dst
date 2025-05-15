@@ -30,7 +30,7 @@ export function ProjectSection({
             />
           </div>
         </div>
-        {/* {works && works.length > 0 && (
+        {works && works.length > 0 && (
           <div className="grid gap-[1.875rem] md:grid-cols-2 lg:grid-cols-4">
             {works.map((work, index) => (
               <div
@@ -51,11 +51,11 @@ export function ProjectSection({
               </div>
             ))}
           </div>
-        )} */}
+        )}
 
-        <h1 className="font-secondary text-xl font-bold leading-[1.25] text-accent-900 dark:text-white md:text-2xl">
+        {/* <h1 className="font-secondary text-xl font-bold leading-[1.25] text-accent-900 dark:text-white md:text-2xl">
           Coming Soon...
-        </h1>
+        </h1> */}
       </div>
     </section>
   );

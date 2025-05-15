@@ -27,7 +27,7 @@ export function TestimonialSection() {
         <div className="mb-10 mr-30px max-w-[680px] md:mb-[3.75rem] md:pr-[140px]">
           <SectionHeading {...sectionHeading} />
         </div>
-        {/* {cards && cards.length > 0 && (
+        {cards && cards.length > 0 && (
           <Carousel
             itemsPerSlide={{
               initial: 1,
@@ -57,10 +57,10 @@ export function TestimonialSection() {
               </CarouselItem>
             ))}
           </Carousel>
-        )} */}
-        <h1 className="font-secondary text-xl font-bold leading-[1.25] text-accent-900 dark:text-white md:text-2xl">
+        )}
+        {/* <h1 className="font-secondary text-xl font-bold leading-[1.25] text-accent-900 dark:text-white md:text-2xl">
           Coming Soon...
-        </h1>
+        </h1> */}
       </Container>
     </section>
   );
