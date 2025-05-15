@@ -31,7 +31,7 @@ export function BlogSection({ className }: SectionProps) {
             />
           </div>
         </div>
-        {/* {blogs && blogs.length > 0 && (
+        {blogs && blogs.length > 0 && (
           <div className="-mx-4 flex flex-wrap justify-center gap-y-30px">
             {blogs.map((blog, index) => (
               <div
@@ -44,10 +44,10 @@ export function BlogSection({ className }: SectionProps) {
               </div>
             ))}
           </div>
-        )} */}
-        <h1 className="font-secondary text-xl font-bold leading-[1.25] text-accent-900 dark:text-white md:text-2xl">
+        )}
+        {/* <h1 className="font-secondary text-xl font-bold leading-[1.25] text-accent-900 dark:text-white md:text-2xl">
           Coming Soon...
-        </h1>
+        </h1> */}
       </Container>
     </section>
   );

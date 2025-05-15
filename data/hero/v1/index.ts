@@ -4,7 +4,7 @@ export const heroData: HeroProps = {
   items: [
     {
       image: {
-        src: '/assets/images/hero/hand.webp',
+        src: '/assets/images/hero/hero-1.jpg',
         alt: 'hero 1',
       },
       title: 'Integrity at the Core of Data',
@@ -15,7 +15,7 @@ export const heroData: HeroProps = {
     },
     {
       image: {
-        src: '/assets/images/hero/woman.webp',
+        src: '/assets/images/hero/hero-11.jpeg',
         alt: 'hero 1',
       },
       title: 'Simplifying Tech, Amplifying You',
@@ -26,7 +26,7 @@ export const heroData: HeroProps = {
     },
     {
       image: {
-        src: '/assets/images/hero/cloud.webp',
+        src: '/assets/images/hero/hero-12.jpeg',
         alt: 'hero 1',
       },
       title: 'Secure. Smart. Scalable. DST.',
