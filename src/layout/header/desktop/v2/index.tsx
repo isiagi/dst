@@ -128,11 +128,11 @@ export function Header() {
                         <FaMagnifyingGlass />
                       </button>
                     </li>
-                    <li>
+                    {/* <li>
                       <span className={actionIconClasses}>
                         <FaCartShopping />
                       </span>
-                    </li>
+                    </li> */}
                     <li>
                       <OffCanvas />
                     </li>

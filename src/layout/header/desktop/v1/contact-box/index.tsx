@@ -1,3 +1,5 @@
+import { MdChatBubble } from 'react-icons/md';
+
 export interface ContactBoxProps {
   title: string;
   phone: string;
@@ -5,11 +7,11 @@ export interface ContactBoxProps {
 
 export function ContactBox({ title, phone }: ContactBoxProps) {
   return (
-    <div className="contact-box hidden flex-none items-center gap-4 text-accent-900 dark:text-white xl:flex">
-      <svg
+    <div className="contact-box hidden flex-none items-center gap-4 text-accent-900 xl:flex dark:text-white">
+      {/* <svg
         className="flex-none"
-        width={56}
-        height={56}
+        width={36}
+        height={36}
         viewBox="0 0 56 56"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -69,8 +71,8 @@ export function ContactBox({ title, phone }: ContactBoxProps) {
             maskUnits="userSpaceOnUse"
             x={0}
             y={0}
-            width={56}
-            height={56}
+            width={36}
+            height={36}
           >
             <path
               d="M0.644531 0.988289H55.6445V55.9883H0.644531V0.988289Z"
@@ -99,19 +101,20 @@ export function ContactBox({ title, phone }: ContactBoxProps) {
         <defs>
           <clipPath id="clip0_2_6638">
             <rect
-              width="54.9899"
-              height={55}
+              width="34.9899"
+              height={35}
               fill="white"
               transform="translate(0.746094 0.988281)"
             />
           </clipPath>
         </defs>
-      </svg>
+      </svg> */}
+      <MdChatBubble size={30} />
       <div>
         <p>{title}</p>
         <a
           href={`tel:${phone.split(' ').join('')}`}
-          className="block font-secondary text-lg font-bold leading-[1.3]"
+          className="block font-secondary text-md font-bold leading-[1.3]"
         >
           {phone}
         </a>

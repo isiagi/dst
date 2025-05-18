@@ -37,7 +37,7 @@ export const teamSectionData: TeamSectionProps = {
         },
       ],
       name: 'Brooklyn Simmons',
-      about: 'President of Sales',
+      about: 'Co-founder',
     },
     {
       slug: '#',
@@ -64,7 +64,7 @@ export const teamSectionData: TeamSectionProps = {
         },
       ],
       name: 'Ralph Edwards',
-      about: 'Medical Assistant',
+      about: 'Co-founder',
     },
     {
       slug: '#',
@@ -91,7 +91,7 @@ export const teamSectionData: TeamSectionProps = {
         },
       ],
       name: 'Jenny Wilson',
-      about: 'Dog Trainer',
+      about: 'CTO',
     },
     {
       slug: '#',
@@ -118,61 +118,61 @@ export const teamSectionData: TeamSectionProps = {
         },
       ],
       name: 'Brooklyn Simmons',
-      about: 'President of Sales',
+      about: 'Head Of Marketing',
     },
-    {
-      slug: '#',
-      image: {
-        src: '/assets/images/team/people-2.png',
-        alt: 'Ralph Edwards',
-      },
-      socials: [
-        {
-          href: 'https://www.facebook.com/',
-          icon: <FaFacebookF />,
-        },
-        {
-          href: 'https://twitter.com/',
-          icon: <FaTwitter />,
-        },
-        {
-          href: 'https://www.linkedin.com/',
-          icon: <FaLinkedinIn />,
-        },
-        {
-          href: 'https://www.pinterest.com/',
-          icon: <FaPinterest />,
-        },
-      ],
-      name: 'Ralph Edwards',
-      about: 'Medical Assistant',
-    },
-    {
-      slug: '#',
-      image: {
-        src: '/assets/images/team/people-3.png',
-        alt: 'Jenny Wilson',
-      },
-      socials: [
-        {
-          href: 'https://www.facebook.com/',
-          icon: <FaFacebookF />,
-        },
-        {
-          href: 'https://twitter.com/',
-          icon: <FaTwitter />,
-        },
-        {
-          href: 'https://www.linkedin.com/',
-          icon: <FaLinkedinIn />,
-        },
-        {
-          href: 'https://www.pinterest.com/',
-          icon: <FaPinterest />,
-        },
-      ],
-      name: 'Jenny Wilson',
-      about: 'Dog Trainer',
-    },
+    // {
+    //   slug: '#',
+    //   image: {
+    //     src: '/assets/images/team/people-2.png',
+    //     alt: 'Ralph Edwards',
+    //   },
+    //   socials: [
+    //     {
+    //       href: 'https://www.facebook.com/',
+    //       icon: <FaFacebookF />,
+    //     },
+    //     {
+    //       href: 'https://twitter.com/',
+    //       icon: <FaTwitter />,
+    //     },
+    //     {
+    //       href: 'https://www.linkedin.com/',
+    //       icon: <FaLinkedinIn />,
+    //     },
+    //     {
+    //       href: 'https://www.pinterest.com/',
+    //       icon: <FaPinterest />,
+    //     },
+    //   ],
+    //   name: 'Ralph Edwards',
+    //   about: 'Medical Assistant',
+    // },
+    // {
+    //   slug: '#',
+    //   image: {
+    //     src: '/assets/images/team/people-3.png',
+    //     alt: 'Jenny Wilson',
+    //   },
+    //   socials: [
+    //     {
+    //       href: 'https://www.facebook.com/',
+    //       icon: <FaFacebookF />,
+    //     },
+    //     {
+    //       href: 'https://twitter.com/',
+    //       icon: <FaTwitter />,
+    //     },
+    //     {
+    //       href: 'https://www.linkedin.com/',
+    //       icon: <FaLinkedinIn />,
+    //     },
+    //     {
+    //       href: 'https://www.pinterest.com/',
+    //       icon: <FaPinterest />,
+    //     },
+    //   ],
+    //   name: 'Jenny Wilson',
+    //   about: 'Dog Trainer',
+    // },
   ],
 };

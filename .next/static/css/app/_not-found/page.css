@@ -1,0 +1,59 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/components/container/container.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+/*
+* Custom container
+*/
+.container_container__az_fT {
+  /* local variable  */
+  --padding-x: 16px;
+  --padding-left: var(--padding-x);
+  --padding-right: var(--padding-x);
+  --padding: calc(var(--padding-left) + var(--padding-right));
+
+  /* container width and padding*/
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1290px;
+  --container-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: var(--padding-left);
+  padding-right: var(--padding-right);
+  max-width: calc(var(--container-width) + var(--padding));
+}
+.container_container__az_fT.container_full-width__xh1Pa {
+  max-width: 100%;
+}
+.container_container__az_fT.container_no-padding__9Wg80 {
+    --padding-x: 0px;
+  }
+@media (min-width: 640px) {
+.container_container__az_fT {
+    --container-width: var(--container-sm);
+}
+  }
+@media (min-width: 768px) {
+.container_container__az_fT {
+    --container-width: var(--container-md);
+}
+  }
+@media (min-width: 1024px) {
+.container_container__az_fT {
+    --container-width: var(--container-lg);
+}
+  }
+@media (min-width: 1280px) {
+.container_container__az_fT {
+    --container-width: var(--container-xl);
+}
+  }
+@media (min-width: 1400px) {
+.container_container__az_fT {
+    --container-width: var(--container-2xl);
+}
+  }
+
