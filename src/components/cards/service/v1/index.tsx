@@ -7,6 +7,7 @@ export interface ServiceProps {
   title: string;
   description: string;
   slug: string;
+  image?: string;
 }
 
 export function ServiceCard({

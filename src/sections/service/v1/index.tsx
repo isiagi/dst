@@ -7,7 +7,6 @@ import { ServiceCard, ServiceProps } from 'src/components/cards/service/v1';
 export interface ServiceSectionProps {
   services: ServiceProps[];
   className?: ClassValue;
-  image?: string;
 }
 
 export function ServiceSection({ services, className }: ServiceSectionProps) {
