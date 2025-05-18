@@ -52,6 +52,7 @@ export const serviceSectionData: ServiceSectionProps = {
       description:
         'We manage your IT systems, ensuring reliability, security, and efficiency so you can focus on your core business without interruptions.',
       slug: '/services/single',
+      image: '/assets/images/hero/hand.webp',
     },
     {
       icon: <Icon3 />,
@@ -59,6 +60,8 @@ export const serviceSectionData: ServiceSectionProps = {
       description:
         'Protect your data, systems, and people from digital threats with our advanced cybersecurity tools, monitoring, and incident response services.',
       slug: '/services/single',
+      image:
+        'https://plus.unsplash.com/premium_photo-1674669009418-2643aa58b11b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D',
     },
     {
       icon: <Icon2 />,
@@ -66,6 +69,8 @@ export const serviceSectionData: ServiceSectionProps = {
       description:
         'Unlock the power of your data with expert analytics, visualization, and machine learning to uncover trends and drive business decisions.',
       slug: '/services/single',
+      image:
+        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGF0YXxlbnwwfHwwfHx8MA%3D%3D',
     },
   ],
 };

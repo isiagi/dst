@@ -6,15 +6,16 @@ import { ScrollToTopButton } from '@/src/components/scroll-to-top';
 import { cn } from '@/src/utils/shadcn';
 import { Toaster } from 'sonner';
 import { ThemeProvider } from '@/src/components/theme-provider';
-import { ModeToggle } from '@/src/components/mode-toggle';
+// import { ModeToggle } from '@/src/components/mode-toggle';
 
 interface Props {
   children: React.ReactNode;
 }
 
 export const metadata: Metadata = {
-  title: 'Techlab',
-  description: 'Techlab - IT Solutions and Services React Nextjs Template',
+  title: 'DST / Data meets Integrity',
+  description:
+    'Datahub Systems Technologies (DST) is a trusted provider of innovative IT solutions designed to help businesses navigate the fast-evolving digital landscape.',
 };
 
 export default async function RootLayout({ children }: Props) {
@@ -43,7 +44,7 @@ export default async function RootLayout({ children }: Props) {
             )}
           >
             <main>{children}</main>
-            <ModeToggle />
+            {/* <ModeToggle /> */}
           </div>
         </ThemeProvider>
         <Toaster

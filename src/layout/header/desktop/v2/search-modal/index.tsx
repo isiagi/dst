@@ -16,7 +16,7 @@ export function SearchModal({ setIsModalOpen }: Props) {
         onClick={() => setIsModalOpen(false)}
       ></div>
       <div
-        className="relative z-444 flex min-h-[320px] items-center bg-accent-300 dark:bg-accent-700"
+        className="relative z-444 flex min-h-[320px] items-center bg-[#91d2f7] dark:bg-accent-700"
         onClick={(e) => e.stopPropagation()}
       >
         <Container>

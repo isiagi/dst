@@ -16,8 +16,9 @@ import { TestimonialSection } from '@/src/sections/testimonial/v1';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'DST | Home',
-  description: 'Techlab - IT Solutions and Services React Nextjs Template',
+  title: 'DST / Data meets Integrity',
+  description:
+    'Datahub Systems Technologies (DST) is a trusted provider of innovative IT solutions designed to help businesses navigate the fast-evolving digital landscape.',
 };
 
 export default function Page() {

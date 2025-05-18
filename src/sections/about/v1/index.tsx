@@ -1,8 +1,11 @@
 import { aboutSectionData } from '@/data/about-section/v1';
 import { ImageProps } from '@/src/common-types';
+import { Button } from '@/src/components/button';
 import { Container } from '@/src/components/container';
+import { CustomLink } from '@/src/components/custom-link';
 import { SectionHeading } from '@/src/components/section-heading';
 import { SectionHeadingWithoutStylingProps } from '@/src/components/section-heading/interface';
+import { cn } from '@/src/utils/shadcn';
 import Image from 'next/image';
 
 import patternOne from 'public/assets/images/about/pattern-1.png';
@@ -27,12 +30,12 @@ export function AboutSection() {
   return (
     <section className="section-padding-primary overflow-hidden">
       <Container>
-        <div className="grid items-center gap-12 lg:grid-cols-[.92fr_1fr] 2xl:gap-20">
+        <div className="grid items-center justify-center gap-12 lg:grid-cols-[.92fr_1fr] 2xl:gap-20">
           {/* Content  */}
           <div className="lg:order-2" data-aos="fade-left" data-aos-delay="200">
             <SectionHeading {...sectionHeading} />
-            {/* {keyPoints && keyPoints.length > 0 && (
-              <div className="mt-7 grid gap-5 text-accent-900 dark:text-white sm:grid-cols-2 md:mt-10 md:gap-[1.875rem]">
+            {keyPoints && keyPoints.length > 0 && (
+              <div className="mt-7 grid gap-5 text-accent-900 sm:grid-cols-2 md:mt-10 md:gap-[1.875rem] dark:text-white">
                 {keyPoints.map((keyPoint, index) => (
                   <div
                     key={index}
@@ -47,10 +50,44 @@ export function AboutSection() {
                   </div>
                 ))}
               </div>
-            )} */}
+            )}
             {description && (
               <p className="mt-5 md:mt-[1.875rem]">{description}</p>
             )}
+            <Button
+              asChild
+              className={cn([
+                // Layout
+                'mx-auto mt-10 rounded-5 border',
+
+                // on card hover effects
+                'group-hover/service:border-primary',
+
+                // Light
+                'border-current bg-transparent text-accent-900 hover:border-primary hover:bg-transparent hover:text-primary',
+
+                // Dark
+                'dark:border-accent-900 dark:bg-accent-900 dark:text-white dark:hover:text-primary  group-hover/service:dark:bg-transparent',
+
+                // stop default button hover effects
+                'before:hidden after:hidden',
+              ])}
+            >
+              <CustomLink href={'/about'}>
+                <span>Learn More</span>
+                <span className="relative top-[-2px] text-sm/[1] text-primary">
+                  <svg
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 12 12"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M11.8125 5.75C11.8125 6.24219 11.4023 6.65234 10.9375 6.65234H7V10.5898C7 11.0547 6.58984 11.4375 6.125 11.4375C5.63281 11.4375 5.25 11.0547 5.25 10.5898V6.65234H1.3125C0.820312 6.65234 0.4375 6.24219 0.4375 5.75C0.4375 5.28516 0.820312 4.90234 1.3125 4.90234H5.25V0.964844C5.25 0.472656 5.63281 0.0625 6.125 0.0625C6.58984 0.0625 7 0.472656 7 0.964844V4.90234H10.9375C11.4023 4.875 11.8125 5.28516 11.8125 5.75Z" />
+                  </svg>
+                </span>
+              </CustomLink>
+            </Button>
           </div>
 
           {/* Images  */}

@@ -23,13 +23,11 @@ export const contactSectionData: ContactSectionProps = {
   contactInfo: {
     sectionHeading: {
       title: 'Get in touch ',
-      description:
-        'It is a long established fact that a reader will be distrol acted bioiiy desig the rea dablea contentIt is a long established fact that a reader will be ',
+      description: 'We could love to hear from you!',
     },
-    location: `Dhaka 102, utl 1216, road 45 house
-shantighar rahuta, 1213`,
-    mail: 'ijmnhhasan000@yourmail.com',
-    phone: '0000-0000-00-000',
+    location: `Top Plaza Suite 4 -2, Nairobi, Kenya`,
+    mail: 'feedback@datahubsystems.com',
+    phone: '+256 724 757710',
   },
 };
 

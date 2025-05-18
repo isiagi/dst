@@ -20,10 +20,10 @@ export const footerSectionData: FooterSectionProps = {
       icon: <FaTwitter />,
       href: 'https://twitter.com/',
     },
-    {
-      icon: <FaInstagram />,
-      href: 'https://www.instagram.com/',
-    },
+    // {
+    //   icon: <FaInstagram />,
+    //   href: 'https://www.instagram.com/',
+    // },
   ],
   columnOne: {
     title: 'Quick Links',
@@ -56,7 +56,7 @@ export const footerSectionData: FooterSectionProps = {
     ],
   },
   columnTwo: {
-    title: 'Service Links',
+    title: 'Quick Access',
     links: [
       {
         label: 'Managed Services',
@@ -111,20 +111,21 @@ export const footerSectionData: FooterSectionProps = {
   },
   columnFour: {
     title: 'Contact Us',
-    phoneNumber: '+256 781 897616',
-    mail: 'dst@gmail.com',
-    location: '1212, Kampala, Uganda',
+    phoneNumber: '+256 724 757710',
+    mail: 'dst@datahubsystems.com',
+    location: 'Top Plaza Suite 4 -2, Nairobi, Kenya',
   },
   footerBottom: {
-    copyrightText: '© DST  2025 | All Rights Reserved',
+    copyrightText:
+      '© Datahub Systems Technologies  2025 | All Rights Reserved',
     links: [
       {
-        label: 'Terms & Condition',
+        label: 'Terms of Use',
         href: '/',
         openNewTab: false,
       },
       {
-        label: 'Privacy Policy',
+        label: 'Privacy',
         href: '/',
         openNewTab: false,
       },

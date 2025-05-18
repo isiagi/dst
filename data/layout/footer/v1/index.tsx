@@ -1,5 +1,10 @@
 import { FooterSectionProps } from '@/src/layout/footer/v1';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa6';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+} from 'react-icons/fa6';
 
 export const footerSectionData: FooterSectionProps = {
   about: {
@@ -15,13 +20,13 @@ export const footerSectionData: FooterSectionProps = {
         href: 'https://twitter.com/',
       },
       {
-        icon: <FaInstagram />,
-        href: 'https://www.instagram.com/',
+        icon: <FaLinkedin />,
+        href: 'https://www.linkedin.com/',
       },
     ],
   },
   columnOne: {
-    title: 'Get Free Link',
+    title: 'Quick Access',
     links: [
       {
         label: 'Managed Services',
@@ -57,9 +62,9 @@ export const footerSectionData: FooterSectionProps = {
   },
   columnTwo: {
     title: 'Address',
-    location: '2972 Kampala, Uganda ',
-    mails: ['dst@example.com', 'dstug@example.com'],
-    phoneNumbers: ['+256 777 946565', '+256 777 946565'],
+    location: 'Top Plaza Suite 4 -2, Nairobi, Kenya',
+    mails: ['dst@datahubsystems.com'],
+    phoneNumbers: ['+256 724 757710', '+256 781 897616'],
   },
   columnThree: {
     title: 'Recent Blog',
@@ -85,15 +90,16 @@ export const footerSectionData: FooterSectionProps = {
     ],
   },
   footerBottom: {
-    copyrightText: '© DST  2025 | All Rights Reserved',
+    copyrightText:
+      '© Datahub Systems Technologies  2025 | All Rights Reserved',
     links: [
       {
-        label: 'Terms & Conditions',
+        label: 'Terms of Use',
         href: '/',
         openNewTab: false,
       },
       {
-        label: 'Privacy Policy',
+        label: 'Privacy',
         href: '/',
         openNewTab: false,
       },

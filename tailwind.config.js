@@ -3,7 +3,7 @@ import { BREAKPOINTS } from './src/themes/interface';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['class'],
+  // darkMode: ['class'],
   content: ['./app/**/*.{ts,tsx}', 'src/**/*.{ts,tsx}'],
   corePlugins: {
     // We are using our custom container.
@@ -31,8 +31,8 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          light: '#DF2A19',
-          DEFAULT: '#B91202',
+          light: '#40aef1',
+          DEFAULT: '#068ad6',
         },
         accent: {
           100: '#F5F4FA',

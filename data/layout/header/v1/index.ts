@@ -5,6 +5,6 @@ export const headerData: HeaderProps = {
   menuItems: menuItemsProps,
   contactInfo: {
     title: 'Need help?',
-    phone: '+256 781 897616',
+    phone: '+256 724 757710',
   },
 };
