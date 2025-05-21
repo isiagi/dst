@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Container } from '@/src/components/container';
 import { SectionHeading } from '@/src/components/section-heading';
 import { getStaggeredDelay } from '@/src/utils/set-staggered-delay';

@@ -1,5 +1,7 @@
 import { LinkProps } from '@/src/common-types';
 import Link from 'next/link';
+import { useEffect } from 'react';
+import { IoClose } from 'react-icons/io5'; // X icon
 
 const suggestions: LinkProps[] = [
   { href: '/about', label: 'About Us' },
@@ -13,9 +15,36 @@ export function SearchModal({
 }: {
   setIsModalOpen: (v: boolean) => void;
 }) {
+  // Close on ESC key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsModalOpen(false);
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [setIsModalOpen]);
+
   return (
-    <div className="fixed inset-0 z-[100] flex items-start justify-center bg-black/60 p-4 pt-32">
-      <div className="w-full max-w-xl rounded-xl bg-white p-6 shadow-lg dark:bg-accent-800">
+    <div
+      className="fixed inset-0 z-[100] flex items-start justify-center bg-black/60 p-4 pt-32"
+      onClick={() => setIsModalOpen(false)} // Close on backdrop click
+    >
+      <div
+        className="relative w-full max-w-xl rounded-xl bg-white p-6 shadow-lg dark:bg-accent-800"
+        onClick={(e) => e.stopPropagation()} // Prevent closing on modal content click
+      >
+        {/* Close Button */}
+        <button
+          onClick={() => setIsModalOpen(false)}
+          className="absolute -top-20 right-4 text-xl text-white hover:text-black dark:text-white dark:hover:text-gray-300"
+          aria-label="Close search modal"
+        >
+          <IoClose />
+        </button>
+
+        {/* Search Input */}
         <div className="mb-4">
           <input
             type="text"
@@ -24,6 +53,7 @@ export function SearchModal({
           />
         </div>
 
+        {/* Suggestions */}
         <div>
           <h3 className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-300">
             Suggestions
@@ -34,7 +64,7 @@ export function SearchModal({
                 <Link
                   href={item.href}
                   className="block rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-accent-700"
-                  onClick={() => setIsModalOpen(false)}
+                  onClick={() => setIsModalOpen(false)} // Close when a link is clicked
                 >
                   {item.label}
                 </Link>
