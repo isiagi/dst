@@ -108,6 +108,7 @@ export const footerSectionData: FooterSectionProps = {
     title: 'Contact Us',
     phoneNumber: '+256 724 757710',
     mail: 'dst@datahubsystems.com',
+
     location: '4th Floor (Suite 4-2), Top Plaza Building, Nairobi, Kenya',
   },
   footerBottom: {
@@ -119,6 +120,7 @@ export const footerSectionData: FooterSectionProps = {
         openNewTab: false,
       },
       {
+
         label: 'Terms of Use',
         href: '/',
         openNewTab: false,

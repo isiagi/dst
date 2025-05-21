@@ -27,10 +27,12 @@ export const contactSectionData: ContactSectionProps = {
       title: 'Get in touch ',
       description: 'We could love to hear from you!',
     },
+
     // location: `Top Plaza Suite 4 -2, Nairobi, Kenya`,
     location: `4th Floor (Suite 4-2), Top Plaza Building`,
     road: 'Kindaruma Road (Off Ngong’ Road)',
     box: 'P.O. Box 717 - 00515, Nairobi',
+
     mail: 'feedback@datahubsystems.com',
     phone: '+256 724 757710',
   },

@@ -32,8 +32,10 @@ export function SearchModal({
       onClick={() => setIsModalOpen(false)} // Close on backdrop click
     >
       <div
+
         className="relative w-full max-w-xl rounded-xl bg-white p-6 shadow-lg dark:bg-accent-800"
         onClick={(e) => e.stopPropagation()} // Prevent closing on modal content click
+
       >
         {/* Close Button */}
         <button

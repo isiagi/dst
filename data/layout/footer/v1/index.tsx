@@ -52,11 +52,13 @@ export const footerSectionData: FooterSectionProps = {
   },
   columnTwo: {
     title: 'Address',
+
     location: [
       '4th Floor (Suite 4-2), Top Plaza Building',
       'Kindaruma Road (Off Ngong’ Road)',
       'P.O. Box 717 - 00515, Nairobi, Kenya',
     ],
+
     mails: ['dst@datahubsystems.com'],
     phoneNumbers: ['+256 724 757710', '+256 781 897616'],
   },
@@ -84,6 +86,7 @@ export const footerSectionData: FooterSectionProps = {
     ],
   },
   footerBottom: {
+
     copyrightText: 'Copyright 2015 - 2025 Datahub Systems Technologies Ltd.',
     links: [
       {
@@ -92,6 +95,7 @@ export const footerSectionData: FooterSectionProps = {
         openNewTab: false,
       },
       {
+
         label: 'Terms of Use',
         href: '/',
         openNewTab: false,

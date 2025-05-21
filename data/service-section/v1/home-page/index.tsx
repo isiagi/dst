@@ -64,17 +64,21 @@ export const serviceSectionData: ServiceSectionProps = {
       icon: <Icon1 />,
       title: 'Application Development',
       description:
+
         'We design and develop custom software tailored to your needs—enhancing productivity, automating tasks, and solving real challenges.',
       slug: '/services/software-solutions',
       image:
         'https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNvZnR3YXJlfGVufDB8fDB8fHww',
+
     },
     {
       icon: <Icon3 />,
       title: 'Cybersecurity',
       description:
         'Protect your data, systems, and people from digital threats with our advanced cybersecurity tools, monitoring, and incident response services.',
+
       slug: '/services/cybersecurity',
+
       image:
         'https://plus.unsplash.com/premium_photo-1674669009418-2643aa58b11b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D',
     },
@@ -83,6 +87,7 @@ export const serviceSectionData: ServiceSectionProps = {
       title: 'Data Analytics',
       description:
         'Unlock the power of your data with expert analytics, visualization, and machine learning to uncover trends and drive business decisions.',
+
       slug: '/services/data-analytics',
       image:
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGF0YXxlbnwwfHwwfHx8MA%3D%3D',
@@ -95,6 +100,7 @@ export const serviceSectionData: ServiceSectionProps = {
 
       slug: '/services/managed-services',
       image: '/assets/images/hero/hand.webp',
+
     },
     // {
     //   icon: <Icon5 />,
