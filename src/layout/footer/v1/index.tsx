@@ -36,7 +36,7 @@ export interface FooterSectionProps {
   };
   columnTwo: {
     title: string;
-    location: string;
+    location: string[];
     mails: string[];
     phoneNumbers: string[];
   };
