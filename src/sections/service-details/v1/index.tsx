@@ -10,9 +10,10 @@ import { FaCircleCheck, FaPhone } from 'react-icons/fa6';
 
 const services: LinkProps[] = [
   {
-    label: 'Managed Services',
-    href: '/services/managed-services',
+    label: 'Application Development',
+    href: '/services/software-solutions',
   },
+
   {
     label: 'Cybersecurity',
     href: '/services/cybersecurity',
@@ -22,13 +23,14 @@ const services: LinkProps[] = [
     href: '/services/data-analytics',
   },
   {
-    label: 'Cloud Computing',
-    href: '/services/cloud-computing',
+    label: 'Managed Services',
+    href: '/services/managed-services',
   },
-  {
-    label: 'Software Solutions',
-    href: '/services/software-solutions',
-  },
+  // {
+  //   label: 'Cloud Computing',
+  //   href: '/services/cloud-computing',
+  // },
+
   // {
   //   label: 'RoboLogic Labs',
   //   href: '/',

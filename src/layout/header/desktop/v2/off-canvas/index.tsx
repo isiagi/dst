@@ -53,11 +53,11 @@ interface IOffCanvas {
 
 const offCanvasProps: IOffCanvas = {
   description:
-    'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+    'Datahub Systems Technologies (DST) is a trusted provider of innovative IT solutions designed to help businesses navigate the fast-evolving digital landscape.',
   contactInfo: {
-    location: ' 88 broklyn street, New York',
-    phoneNumber: '+1 555-9990-153',
-    mail: 'info@example.com',
+    location: '4th Floor (Suite 4-2), Top Plaza Building, Nairobi',
+    phoneNumber: '+256 724 757710',
+    mail: 'dst@datahubsystems.com',
   },
   socialLinks: [
     {

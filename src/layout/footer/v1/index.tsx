@@ -230,7 +230,7 @@ export function Footer({ className }: SectionProps) {
               <nav aria-label="footer bottom navigation">
                 <ul className="flex flex-wrap items-center gap-x-4  md:gap-x-7">
                   {footerBottom.links.map((link) => (
-                    <li key={link.label}>
+                    <li key={link.label} className="font-semibold">
                       <CustomLink
                         aria-label={`Go to page ${link.label}`}
                         href={link.href}

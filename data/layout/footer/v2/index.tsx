@@ -20,10 +20,10 @@ export const footerSectionData: FooterSectionProps = {
       icon: <FaTwitter />,
       href: 'https://twitter.com/',
     },
-    {
-      icon: <FaInstagram />,
-      href: 'https://www.instagram.com/',
-    },
+    // {
+    //   icon: <FaInstagram />,
+    //   href: 'https://www.instagram.com/',
+    // },
   ],
   columnOne: {
     title: 'Quick Links',
@@ -56,10 +56,10 @@ export const footerSectionData: FooterSectionProps = {
     ],
   },
   columnTwo: {
-    title: 'Service Links',
+    title: 'Quick Access',
     links: [
       {
-        label: 'Managed Services',
+        label: 'Application Development',
         href: '/services/managed-services',
         openNewTab: false,
       },
@@ -74,13 +74,8 @@ export const footerSectionData: FooterSectionProps = {
         openNewTab: false,
       },
       {
-        label: 'Cloud Computing',
-        href: '/services/cloud-computing',
-        openNewTab: false,
-      },
-      {
-        label: 'Software Solutions',
-        href: '/services/software-solutions',
+        label: 'Managed Services',
+        href: '/services/managed-services',
         openNewTab: false,
       },
     ],
@@ -111,25 +106,36 @@ export const footerSectionData: FooterSectionProps = {
   },
   columnFour: {
     title: 'Contact Us',
-    phoneNumber: '+256 781 897616',
-    mail: 'dst@gmail.com',
-    location: '1212, Kampala, Uganda',
+    phoneNumber: '+256 724 757710',
+    mail: 'dst@datahubsystems.com',
+    location: '4th Floor (Suite 4-2), Top Plaza Building, Nairobi, Kenya',
   },
   footerBottom: {
-    copyrightText: '© DST  2025 | All Rights Reserved',
+    copyrightText: 'Copyright 2015 - 2025 Datahub Systems Technologies Ltd.',
     links: [
       {
-        label: 'Terms & Condition',
-        href: '/',
-        openNewTab: false,
-      },
-      {
-        label: 'Privacy Policy',
-        href: '/',
-        openNewTab: false,
-      },
-      {
         label: 'Contact Us',
+        href: '/contact',
+        openNewTab: false,
+      },
+      {
+        label: 'Terms of Use',
+        href: '/',
+        openNewTab: false,
+      },
+      {
+        label: 'Privacy',
+        href: '/',
+        openNewTab: false,
+      },
+
+      {
+        label: 'Cookies',
+        href: '/',
+        openNewTab: false,
+      },
+      {
+        label: 'Subscription',
         href: '/',
         openNewTab: false,
       },

@@ -20,9 +20,7 @@ export function ContactSection() {
         {/* Image area  */}
         <div className="absolute left-0 top-0 z-1 h-full w-full overflow-hidden bg-red-500 md:w-[56%] md:rounded-r-5">
           <Image
-            src={
-              'https://img.freepik.com/free-photo/young-man-woman-sitting-cafe_273609-15537.jpg?ga=GA1.1.284002368.1746900246&semt=ais_hybrid&w=740'
-            }
+            src={image.src}
             alt={image.alt}
             fill
             className="object-cover"

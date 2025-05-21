@@ -1,5 +1,10 @@
 import { FooterSectionProps } from '@/src/layout/footer/v1';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa6';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+} from 'react-icons/fa6';
 
 export const footerSectionData: FooterSectionProps = {
   about: {
@@ -15,16 +20,16 @@ export const footerSectionData: FooterSectionProps = {
         href: 'https://twitter.com/',
       },
       {
-        icon: <FaInstagram />,
-        href: 'https://www.instagram.com/',
+        icon: <FaLinkedin />,
+        href: 'https://www.linkedin.com/',
       },
     ],
   },
   columnOne: {
-    title: 'Get Free Link',
+    title: 'Quick Access',
     links: [
       {
-        label: 'Managed Services',
+        label: 'Application Development',
         href: '/services/managed-services',
         openNewTab: false,
       },
@@ -39,27 +44,21 @@ export const footerSectionData: FooterSectionProps = {
         openNewTab: false,
       },
       {
-        label: 'Cloud Computing',
-        href: '/services/cloud-computing',
+        label: 'Managed Services',
+        href: '/services/managed-services',
         openNewTab: false,
       },
-      {
-        label: 'Software Solutions',
-        href: '/services/software-solutions',
-        openNewTab: false,
-      },
-      // {
-      //   label: 'Others',
-      //   href: '/',
-      //   openNewTab: false,
-      // },
     ],
   },
   columnTwo: {
     title: 'Address',
-    location: '2972 Kampala, Uganda ',
-    mails: ['dst@example.com', 'dstug@example.com'],
-    phoneNumbers: ['+256 777 946565', '+256 777 946565'],
+    location: [
+      '4th Floor (Suite 4-2), Top Plaza Building',
+      'Kindaruma Road (Off Ngong’ Road)',
+      'P.O. Box 717 - 00515, Nairobi, Kenya',
+    ],
+    mails: ['dst@datahubsystems.com'],
+    phoneNumbers: ['+256 724 757710', '+256 781 897616'],
   },
   columnThree: {
     title: 'Recent Blog',
@@ -85,21 +84,32 @@ export const footerSectionData: FooterSectionProps = {
     ],
   },
   footerBottom: {
-    copyrightText: '© DST  2025 | All Rights Reserved',
+    copyrightText: 'Copyright 2015 - 2025 Datahub Systems Technologies Ltd.',
     links: [
-      {
-        label: 'Terms & Conditions',
-        href: '/',
-        openNewTab: false,
-      },
-      {
-        label: 'Privacy Policy',
-        href: '/',
-        openNewTab: false,
-      },
       {
         label: 'Contact Us',
         href: '/contact',
+        openNewTab: false,
+      },
+      {
+        label: 'Terms of Use',
+        href: '/',
+        openNewTab: false,
+      },
+      {
+        label: 'Privacy',
+        href: '/',
+        openNewTab: false,
+      },
+
+      {
+        label: 'Cookies',
+        href: '/',
+        openNewTab: false,
+      },
+      {
+        label: 'Subscription',
+        href: '/',
         openNewTab: false,
       },
     ],

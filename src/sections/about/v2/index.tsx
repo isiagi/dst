@@ -16,6 +16,7 @@ export interface AboutSectionProps {
 
 export function AboutSection() {
   const { sectionHeading, aboutUsPoints, image, videoUrl } = aboutSectionData;
+
   return (
     <section className="section-padding-primary overflow-hidden">
       <Container>

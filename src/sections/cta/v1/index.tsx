@@ -4,13 +4,14 @@ import { Container } from '@/src/components/container';
 import { TextInput } from '@/src/components/inputs/text-input';
 import { cn } from '@/src/utils/shadcn';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export interface CtaSectionProps {
   title: string;
 }
 
 const ctaSectionData: CtaSectionProps = {
-  title: 'Have question? Feel Free To Ask',
+  title: 'Have question? Feel Free To Ask...',
 };
 
 export function CtaSection({ className }: SectionProps) {
@@ -24,10 +25,10 @@ export function CtaSection({ className }: SectionProps) {
               {title}
             </h2>
             <form className="mt-6 flex flex-col items-center justify-center gap-[.625rem] md:mt-[1.875rem] md:flex-row">
-              <TextInput
+              {/* <TextInput
                 placeholder="Enter Email"
                 className="border-white border-opacity-60 text-white placeholder:text-white focus:border-white dark:border-white dark:border-opacity-60 dark:text-white dark:placeholder:text-white"
-              />
+              /> */}
               <Button
                 type="submit"
                 className={cn(
@@ -35,8 +36,12 @@ export function CtaSection({ className }: SectionProps) {
                   'bg-primary-light',
                   'after:bg-white hover:text-accent-700 dark:hover:text-accent-700'
                 )}
+                asChild
               >
-                <span>SUSCRIBE</span>
+                <Link href={'/contact'}>
+                  <span>Talk To Us</span>
+                </Link>
+                {/* <span>SUSCRIBE</span> */}
               </Button>
             </form>
           </div>

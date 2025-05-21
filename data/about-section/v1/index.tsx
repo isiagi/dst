@@ -40,19 +40,19 @@ export const aboutSectionData: AboutSectionProps = {
       height: 132,
     },
     image2: {
-      src: 'https://www.shutterstock.com/image-photo/friendly-successful-all-african-business-600nw-1272443683.jpg',
+      src: '/assets/images/about/about-2.png',
       alt: 'about two',
       width: 312,
       height: 304,
     },
     image3: {
-      src: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZXxlbnwwfHwwfHx8MA%3D%3D',
+      src: '/assets/images/about/about-3.png',
       alt: 'about three',
       width: 250,
       height: 265,
     },
     image4: {
-      src: 'https://www.bls.gov/careeroutlook/2018/images/blacks-in-the-labor-force_cover.jpg',
+      src: '/assets/images/about/about-4.png',
       alt: 'about four',
       width: 250,
       height: 265,
