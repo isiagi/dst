@@ -93,10 +93,12 @@ export const serviceSectionData: ServiceSectionProps = {
   services: [
     {
       icon: <Icon1 />,
-      title: 'Managed Services',
+      title: 'Application Development',
       description:
-        'We manage your IT systems, ensuring reliability, security, and efficiency so you can focus on your core business without interruptions.',
-      slug: '/services/managed-services',
+        'We design and develop custom software tailored to your needs—enhancing productivity, automating tasks, and solving real challenges.',
+      slug: '/services/software-solutions',
+      image:
+        'https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNvZnR3YXJlfGVufDB8fDB8fHww',
     },
     {
       icon: <Icon3 />,
@@ -104,6 +106,8 @@ export const serviceSectionData: ServiceSectionProps = {
       description:
         'Protect your data, systems, and people from digital threats with our advanced cybersecurity tools, monitoring, and incident response services.',
       slug: '/services/cybersecurity',
+      image:
+        'https://plus.unsplash.com/premium_photo-1674669009418-2643aa58b11b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D',
     },
     {
       icon: <Icon2 />,
@@ -111,21 +115,25 @@ export const serviceSectionData: ServiceSectionProps = {
       description:
         'Unlock the power of your data with expert analytics, visualization, and machine learning to uncover trends and drive business decisions.',
       slug: '/services/data-analytics',
+      image:
+        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGF0YXxlbnwwfHwwfHx8MA%3D%3D',
     },
     {
       icon: <Icon4 />,
-      title: 'Cloud Computing',
+      title: 'Managed Services',
       description:
-        'Seamlessly move to the cloud with scalable, cost-effective solutions—backed by expert support, security, and top-tier cloud platforms.',
-      slug: '/services/cloud-computing',
+        'We manage your IT systems, ensuring reliability, security, and efficiency so you can focus on your core business without interruptions.',
+
+      slug: '/services/managed-services',
+      image: '/assets/images/hero/hand.webp',
     },
-    {
-      icon: <Icon5 />,
-      title: 'Software Solutions',
-      description:
-        'We design and develop custom software tailored to your needs—enhancing productivity, automating tasks, and solving real challenges.',
-      slug: '/services/software-solutions',
-    },
+    // {
+    //   icon: <Icon5 />,
+    //   title: 'Software Solutions',
+    //   description:
+    //     'We design and develop custom software tailored to your needs—enhancing productivity, automating tasks, and solving real challenges.',
+    //   slug: '/services/software-solutions',
+    // },
     // {
     //   icon: <Icon6 />,
     //   title: 'Data Analytics',
@@ -221,34 +229,34 @@ export const dstServices = [
     imageEnd:
       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGF0YXxlbnwwfHwwfHx8MA%3D%3D',
   },
-  {
-    imageStart:
-      'https://media.istockphoto.com/id/2162026367/photo/cloud-computing-sign-digital-technology-data-concept-on-cpu.webp?a=1&b=1&s=612x612&w=0&k=20&c=AwdW-zyV3AAUfZL26f8pkU0yo7tgj-kwly0anzTEKwE=',
-    name: 'cloud-computing',
-    long: 'DST helps organizations move to the cloud with confidence. Our cloud computing services enable flexibility, scalability, and cost-efficiency without sacrificing security. Whether you’re migrating infrastructure, adopting SaaS platforms, or managing multi-cloud environments, we simplify the process and ensure your systems are integrated and optimized. With strong partnerships across AWS, Azure, and Google Cloud, we provide custom solutions that grow with your business—securely and reliably.',
-    short:
-      'Scale smarter with secure, efficient cloud solutions designed to grow with your business.',
-    subsections: [
-      {
-        heading: 'Cloud Migration',
-        text: 'We plan and execute seamless transitions from on-premises to cloud environments with minimal disruption.',
-      },
-      {
-        heading: 'Cloud Integration',
-        text: 'Connect cloud platforms with your existing systems for streamlined workflows and data flow.',
-      },
-      {
-        heading: 'Cloud Management',
-        text: 'We handle the day-to-day monitoring, updates, and maintenance of your cloud infrastructure.',
-      },
-      {
-        heading: 'Cloud Security',
-        text: 'Robust measures to protect your cloud assets from threats while maintaining compliance.',
-      },
-    ],
-    imageEnd:
-      'https://media.istockphoto.com/id/2162026367/photo/cloud-computing-sign-digital-technology-data-concept-on-cpu.webp?a=1&b=1&s=612x612&w=0&k=20&c=AwdW-zyV3AAUfZL26f8pkU0yo7tgj-kwly0anzTEKwE=',
-  },
+  // {
+  //   imageStart:
+  //     'https://media.istockphoto.com/id/2162026367/photo/cloud-computing-sign-digital-technology-data-concept-on-cpu.webp?a=1&b=1&s=612x612&w=0&k=20&c=AwdW-zyV3AAUfZL26f8pkU0yo7tgj-kwly0anzTEKwE=',
+  //   name: 'cloud-computing',
+  //   long: 'DST helps organizations move to the cloud with confidence. Our cloud computing services enable flexibility, scalability, and cost-efficiency without sacrificing security. Whether you’re migrating infrastructure, adopting SaaS platforms, or managing multi-cloud environments, we simplify the process and ensure your systems are integrated and optimized. With strong partnerships across AWS, Azure, and Google Cloud, we provide custom solutions that grow with your business—securely and reliably.',
+  //   short:
+  //     'Scale smarter with secure, efficient cloud solutions designed to grow with your business.',
+  //   subsections: [
+  //     {
+  //       heading: 'Cloud Migration',
+  //       text: 'We plan and execute seamless transitions from on-premises to cloud environments with minimal disruption.',
+  //     },
+  //     {
+  //       heading: 'Cloud Integration',
+  //       text: 'Connect cloud platforms with your existing systems for streamlined workflows and data flow.',
+  //     },
+  //     {
+  //       heading: 'Cloud Management',
+  //       text: 'We handle the day-to-day monitoring, updates, and maintenance of your cloud infrastructure.',
+  //     },
+  //     {
+  //       heading: 'Cloud Security',
+  //       text: 'Robust measures to protect your cloud assets from threats while maintaining compliance.',
+  //     },
+  //   ],
+  //   imageEnd:
+  //     'https://media.istockphoto.com/id/2162026367/photo/cloud-computing-sign-digital-technology-data-concept-on-cpu.webp?a=1&b=1&s=612x612&w=0&k=20&c=AwdW-zyV3AAUfZL26f8pkU0yo7tgj-kwly0anzTEKwE=',
+  // },
   {
     imageStart:
       'https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNvZnR3YXJlfGVufDB8fDB8fHww',

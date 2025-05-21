@@ -9,7 +9,9 @@ export function BrandLogo() {
     <CustomLink href="/">
       <Image
         className="logo-dark w-[2.5rem] dark:hidden"
-        src={'/assets/images/brand/logo.jpg'}
+
+        src={'/assets/images/brand/dst_ogo.png'}
+
         width={logoLight.width}
         height={logoLight.height}
         placeholder="blur"
@@ -20,7 +22,9 @@ export function BrandLogo() {
       />
       <Image
         className="logo-dark hidden w-[2.5rem] dark:block"
-        src={'/assets/images/brand/logo.jpg'}
+
+        src={'/assets/images/brand/dst_ogo.png'}
+
         width={logoDark.width}
         height={logoDark.height}
         placeholder="blur"

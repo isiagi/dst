@@ -1,26 +1,23 @@
 import { HeaderProps } from '@/src/layout/header/desktop/v1';
 
 export const menuItemsProps: HeaderProps['menuItems'] = [
+  // {
+  //   label: 'Home',
+  //   href: '/',
+  //   // subMenuItems: [
+  //   //   {
+  //   //     label: 'Home One',
+  //   //     href: '/',
+  //   //   },
+  //   //   {
+  //   //     label: 'Home Two',
+  //   //     href: '/home-2',
+  //   //   },
+  //   // ],
+  // },
+
   {
-    label: 'Home',
-    href: '/',
-    // subMenuItems: [
-    //   {
-    //     label: 'Home One',
-    //     href: '/',
-    //   },
-    //   {
-    //     label: 'Home Two',
-    //     href: '/home-2',
-    //   },
-    // ],
-  },
-  {
-    label: 'About',
-    href: '/about',
-  },
-  {
-    label: 'Service',
+    label: 'Products & Services',
     href: '/services',
   },
   // {
@@ -37,11 +34,11 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
   //   ],
   // },
   {
-    label: 'Project',
+    label: 'Support',
     href: '/project',
   },
   {
-    label: 'Blog',
+    label: 'Partners & Developers',
     href: '/blog',
     // subMenuItems: [
     //   {
@@ -75,8 +72,12 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
   //     },
   //   ],
   // },
+  // {
+  //   label: 'Contact',
+  //   href: '/contact',
+  // },
   {
-    label: 'Contact',
-    href: '/contact',
+    label: 'About DST',
+    href: '/about',
   },
 ];

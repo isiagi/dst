@@ -59,7 +59,7 @@ export const footerSectionData: FooterSectionProps = {
     title: 'Quick Access',
     links: [
       {
-        label: 'Managed Services',
+        label: 'Application Development',
         href: '/services/managed-services',
         openNewTab: false,
       },
@@ -74,13 +74,8 @@ export const footerSectionData: FooterSectionProps = {
         openNewTab: false,
       },
       {
-        label: 'Cloud Computing',
-        href: '/services/cloud-computing',
-        openNewTab: false,
-      },
-      {
-        label: 'Software Solutions',
-        href: '/services/software-solutions',
+        label: 'Managed Services',
+        href: '/services/managed-services',
         openNewTab: false,
       },
     ],
@@ -113,13 +108,19 @@ export const footerSectionData: FooterSectionProps = {
     title: 'Contact Us',
     phoneNumber: '+256 724 757710',
     mail: 'dst@datahubsystems.com',
-    location: 'Top Plaza Suite 4 -2, Nairobi, Kenya',
+
+    location: '4th Floor (Suite 4-2), Top Plaza Building, Nairobi, Kenya',
   },
   footerBottom: {
-    copyrightText:
-      '© Datahub Systems Technologies  2025 | All Rights Reserved',
+    copyrightText: 'Copyright 2015 - 2025 Datahub Systems Technologies Ltd.',
     links: [
       {
+        label: 'Contact Us',
+        href: '/contact',
+        openNewTab: false,
+      },
+      {
+
         label: 'Terms of Use',
         href: '/',
         openNewTab: false,
@@ -129,8 +130,14 @@ export const footerSectionData: FooterSectionProps = {
         href: '/',
         openNewTab: false,
       },
+
       {
-        label: 'Contact Us',
+        label: 'Cookies',
+        href: '/',
+        openNewTab: false,
+      },
+      {
+        label: 'Subscription',
         href: '/',
         openNewTab: false,
       },

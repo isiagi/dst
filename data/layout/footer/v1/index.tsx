@@ -29,7 +29,7 @@ export const footerSectionData: FooterSectionProps = {
     title: 'Quick Access',
     links: [
       {
-        label: 'Managed Services',
+        label: 'Application Development',
         href: '/services/managed-services',
         openNewTab: false,
       },
@@ -44,25 +44,21 @@ export const footerSectionData: FooterSectionProps = {
         openNewTab: false,
       },
       {
-        label: 'Cloud Computing',
-        href: '/services/cloud-computing',
+        label: 'Managed Services',
+        href: '/services/managed-services',
         openNewTab: false,
       },
-      {
-        label: 'Software Solutions',
-        href: '/services/software-solutions',
-        openNewTab: false,
-      },
-      // {
-      //   label: 'Others',
-      //   href: '/',
-      //   openNewTab: false,
-      // },
     ],
   },
   columnTwo: {
     title: 'Address',
-    location: 'Top Plaza Suite 4 -2, Nairobi, Kenya',
+
+    location: [
+      '4th Floor (Suite 4-2), Top Plaza Building',
+      'Kindaruma Road (Off Ngong’ Road)',
+      'P.O. Box 717 - 00515, Nairobi, Kenya',
+    ],
+
     mails: ['dst@datahubsystems.com'],
     phoneNumbers: ['+256 724 757710', '+256 781 897616'],
   },
@@ -90,10 +86,16 @@ export const footerSectionData: FooterSectionProps = {
     ],
   },
   footerBottom: {
-    copyrightText:
-      '© Datahub Systems Technologies  2025 | All Rights Reserved',
+
+    copyrightText: 'Copyright 2015 - 2025 Datahub Systems Technologies Ltd.',
     links: [
       {
+        label: 'Contact Us',
+        href: '/contact',
+        openNewTab: false,
+      },
+      {
+
         label: 'Terms of Use',
         href: '/',
         openNewTab: false,
@@ -103,9 +105,15 @@ export const footerSectionData: FooterSectionProps = {
         href: '/',
         openNewTab: false,
       },
+
       {
-        label: 'Contact Us',
-        href: '/contact',
+        label: 'Cookies',
+        href: '/',
+        openNewTab: false,
+      },
+      {
+        label: 'Subscription',
+        href: '/',
         openNewTab: false,
       },
     ],

@@ -32,7 +32,9 @@ export function ServiceCard({
       ])}
     >
       {/* Background Overlay */}
-      <div className="pointer-events-none absolute inset-0 z-0 bg-white/90 dark:bg-black/50" />
+
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[#bee2f7]/80 transition-all duration-300 group-hover/service:bg-[#bee2f7]/95 dark:bg-black/50" />
+
       {/* Content goes here */}
       <div className="relative z-10 space-y-6">
         <div className="z-10 flex items-center gap-5">

@@ -1,48 +1,79 @@
-import { Container } from '@/src/components/container';
-import { TextInput } from '@/src/components/inputs/text-input';
-import { Button } from '@/src/components/button';
-import { FaMagnifyingGlass } from 'react-icons/fa6';
-import { FaTimes } from 'react-icons/fa';
+import { LinkProps } from '@/src/common-types';
+import Link from 'next/link';
+import { useEffect } from 'react';
+import { IoClose } from 'react-icons/io5'; // X icon
 
-interface Props {
-  setIsModalOpen: (open: boolean) => void;
-}
+const suggestions: LinkProps[] = [
+  { href: '/about', label: 'About Us' },
+  { href: '/services', label: 'Services' },
+  { href: '/contact', label: 'Contact' },
+  { href: '/blog', label: 'Blog' },
+];
 
-export function SearchModal({ setIsModalOpen }: Props) {
+export function SearchModal({
+  setIsModalOpen,
+}: {
+  setIsModalOpen: (v: boolean) => void;
+}) {
+  // Close on ESC key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsModalOpen(false);
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [setIsModalOpen]);
+
   return (
-    <div className="fixed left-0 top-0 z-111 h-full w-full">
+    <div
+      className="fixed inset-0 z-[100] flex items-start justify-center bg-black/60 p-4 pt-32"
+      onClick={() => setIsModalOpen(false)} // Close on backdrop click
+    >
       <div
-        className="absolute inset-0 z-444"
-        onClick={() => setIsModalOpen(false)}
-      ></div>
-      <div
-        className="relative z-444 flex min-h-[320px] items-center bg-[#91d2f7] dark:bg-accent-700"
-        onClick={(e) => e.stopPropagation()}
+
+        className="relative w-full max-w-xl rounded-xl bg-white p-6 shadow-lg dark:bg-accent-800"
+        onClick={(e) => e.stopPropagation()} // Prevent closing on modal content click
+
       >
-        <Container>
-          <div className="mx-auto  flex max-w-[560px] items-center gap-0">
-            <TextInput
-              placeholder="Search Here"
-              name="text"
-              className="rounded-5 rounded-r-none border-none bg-white text-black dark:text-black"
-            />
-            <Button
-              type="submit"
-              className="!h-[60px] !w-[60px] flex-none rounded-l-none bg-primary !p-0 after:hidden hover:bg-primary-light hover:text-white dark:hover:text-white"
-            >
-              <span className="relative z-1">
-                <FaMagnifyingGlass />
-              </span>
-            </Button>
-          </div>
-        </Container>
+        {/* Close Button */}
         <button
-          aria-label="search modal handler"
-          className="absolute right-7 top-2.5 z-10 grid h-[60px] w-[60px] place-items-center rounded-5 bg-primary text-[30px] text-white transition-colors duration-350 hover:bg-primary-light"
           onClick={() => setIsModalOpen(false)}
+          className="absolute -top-20 right-4 text-xl text-white hover:text-black dark:text-white dark:hover:text-gray-300"
+          aria-label="Close search modal"
         >
-          <FaTimes />
+          <IoClose />
         </button>
+
+        {/* Search Input */}
+        <div className="mb-4">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="w-full rounded-md border border-gray-300 p-3 focus:border-primary focus:outline-none dark:bg-accent-900 dark:text-white"
+          />
+        </div>
+
+        {/* Suggestions */}
+        <div>
+          <h3 className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-300">
+            Suggestions
+          </h3>
+          <ul className="space-y-2">
+            {suggestions.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="block rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-accent-700"
+                  onClick={() => setIsModalOpen(false)} // Close when a link is clicked
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

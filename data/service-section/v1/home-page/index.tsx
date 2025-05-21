@@ -44,22 +44,41 @@ function Icon3() {
   );
 }
 
+function Icon4() {
+  return (
+    <svg
+      width="1em"
+      height="1em"
+      viewBox="0 0 66 65"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M28.363 62.8054C27.9395 62.6241 27.5901 62.3042 27.3724 61.8982C27.1546 61.4922 27.0813 61.0242 27.1646 60.5711L30.7802 40.6242H12.9052C12.5322 40.625 12.1662 40.523 11.8473 40.3295C11.5284 40.1361 11.269 39.8585 11.0974 39.5273C10.9402 39.2062 10.8706 38.8492 10.8956 38.4926C10.9206 38.1359 11.0392 37.7922 11.2396 37.4961L35.6146 2.96481C35.8835 2.58598 36.2742 2.31079 36.7214 2.18511C37.1687 2.05943 37.6455 2.09087 38.0724 2.27418C38.4881 2.44537 38.8352 2.74962 39.0594 3.13925C39.2837 3.52889 39.3723 3.9819 39.3115 4.42731L35.6552 24.3742H53.5302C53.9032 24.3734 54.2692 24.4754 54.5881 24.6688C54.907 24.8623 55.1664 25.1399 55.338 25.4711C55.4952 25.7922 55.5648 26.1491 55.5398 26.5058C55.5149 26.8624 55.3962 27.2062 55.1958 27.5023L30.8208 62.0336C30.5636 62.4266 30.1781 62.7182 29.7299 62.859C29.2818 62.9997 28.7988 62.9808 28.363 62.8054ZM16.8255 36.5617H33.2177C33.5161 36.5612 33.811 36.6265 34.0813 36.7529C34.3516 36.8792 34.5908 37.0636 34.7818 37.2929C34.9703 37.5225 35.1063 37.7906 35.18 38.0784C35.2537 38.3662 35.2634 38.6666 35.2083 38.9586L32.7911 52.2429L49.6099 28.4367H33.2177C32.9193 28.4372 32.6244 28.3719 32.3541 28.2455C32.0838 28.1191 31.8446 27.9347 31.6536 27.7054C31.4651 27.4759 31.3291 27.2078 31.2554 26.92C31.1817 26.6322 31.1721 26.3317 31.2271 26.0398L33.6443 12.7554L16.8255 36.5617Z" />
+    </svg>
+  );
+}
+
 export const serviceSectionData: ServiceSectionProps = {
   services: [
     {
       icon: <Icon1 />,
-      title: 'Managed Services',
+      title: 'Application Development',
       description:
-        'We manage your IT systems, ensuring reliability, security, and efficiency so you can focus on your core business without interruptions.',
-      slug: '/services/single',
-      image: '/assets/images/hero/hand.webp',
+
+        'We design and develop custom software tailored to your needs—enhancing productivity, automating tasks, and solving real challenges.',
+      slug: '/services/software-solutions',
+      image:
+        'https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNvZnR3YXJlfGVufDB8fDB8fHww',
+
     },
     {
       icon: <Icon3 />,
       title: 'Cybersecurity',
       description:
         'Protect your data, systems, and people from digital threats with our advanced cybersecurity tools, monitoring, and incident response services.',
-      slug: '/services/single',
+
+      slug: '/services/cybersecurity',
+
       image:
         'https://plus.unsplash.com/premium_photo-1674669009418-2643aa58b11b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D',
     },
@@ -68,9 +87,34 @@ export const serviceSectionData: ServiceSectionProps = {
       title: 'Data Analytics',
       description:
         'Unlock the power of your data with expert analytics, visualization, and machine learning to uncover trends and drive business decisions.',
-      slug: '/services/single',
+
+      slug: '/services/data-analytics',
       image:
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGF0YXxlbnwwfHwwfHx8MA%3D%3D',
     },
+    {
+      icon: <Icon4 />,
+      title: 'Managed Services',
+      description:
+        'We manage your IT systems, ensuring reliability, security, and efficiency so you can focus on your core business without interruptions.',
+
+      slug: '/services/managed-services',
+      image: '/assets/images/hero/hand.webp',
+
+    },
+    // {
+    //   icon: <Icon5 />,
+    //   title: 'Software Solutions',
+    //   description:
+    //     'We design and develop custom software tailored to your needs—enhancing productivity, automating tasks, and solving real challenges.',
+    //   slug: '/services/software-solutions',
+    // },
+    // {
+    //   icon: <Icon6 />,
+    //   title: 'Data Analytics',
+    //   description:
+    //     'It is a long established fact that a reader will be distracted by the readable content of a page layout long established',
+    //   slug: '/services/single',
+    // },
   ],
 };

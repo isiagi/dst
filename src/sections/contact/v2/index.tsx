@@ -11,6 +11,8 @@ export interface ContactSectionProps {
   contactInfo: {
     sectionHeading: SectionHeadingWithoutStylingProps;
     location: string;
+    road: string;
+    box: string;
     mail: string;
     phone: string;
   };
@@ -18,14 +20,19 @@ export interface ContactSectionProps {
 
 export const contactSectionData: ContactSectionProps = {
   sectionHeading: {
-    title: 'Feel free to messege',
+    title: 'Feel free to message',
   },
   contactInfo: {
     sectionHeading: {
       title: 'Get in touch ',
       description: 'We could love to hear from you!',
     },
-    location: `Top Plaza Suite 4 -2, Nairobi, Kenya`,
+
+    // location: `Top Plaza Suite 4 -2, Nairobi, Kenya`,
+    location: `4th Floor (Suite 4-2), Top Plaza Building`,
+    road: 'Kindaruma Road (Off Ngong’ Road)',
+    box: 'P.O. Box 717 - 00515, Nairobi',
+
     mail: 'feedback@datahubsystems.com',
     phone: '+256 724 757710',
   },
@@ -65,6 +72,8 @@ export function ContactSection() {
                   <address className="not-italic">
                     {contactInfo.location}
                   </address>
+                  <address className="not-italic">{contactInfo.road}</address>
+                  <address className="not-italic">{contactInfo.box}</address>
                 </div>
               </li>
               <li className={addressItemClasses}>

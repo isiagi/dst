@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Container } from '@/src/components/container';
+import { SectionHeading } from '@/src/components/section-heading';
 import { getStaggeredDelay } from '@/src/utils/set-staggered-delay';
 import { cn } from '@/src/utils/shadcn';
 import { ClassValue } from 'clsx';
@@ -9,22 +11,48 @@ export interface ServiceSectionProps {
   className?: ClassValue;
 }
 
+const sectionHeading: any = {
+  subtitle: 'Services',
+  title: 'What We Offer',
+};
+
 export function ServiceSection({ services, className }: ServiceSectionProps) {
   return (
     <section className={cn('section-padding-primary', className)}>
+      <div className="mx-auto mb-10 flex w-full max-w-[680px] flex-col gap-5 md:mb-[3.75rem]">
+        <SectionHeading {...sectionHeading} alignment="center" />
+      </div>
       <Container>
         {services && services.length > 0 && (
-          <div className="-mx-4 flex flex-wrap justify-center gap-y-30px">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                data-aos="fade-up"
-                data-aos-delay={getStaggeredDelay([200, 400, 600], index)}
-                className="w-full px-4 md:w-1/2 md:px-[15px] lg:w-1/3"
-              >
-                <ServiceCard {...service} />
-              </div>
-            ))}
+          <div className="grid gap-6 md:grid-cols-12">
+            {services.map((service, index) => {
+              const isFirstRow = index < 2;
+
+              // Define span logic for large screens
+              const colSpanClass =
+                index === 0
+                  ? 'lg:col-span-5'
+                  : index === 1
+                    ? 'lg:col-span-7'
+                    : index === 2
+                      ? 'lg:col-span-7'
+                      : 'lg:col-span-5';
+
+              return (
+                <div
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={getStaggeredDelay([200, 400, 600], index)}
+                  className={cn(
+                    'col-span-12', // full width on small screens
+                    'md:col-span-6', // half on medium screens
+                    colSpanClass // custom on large screens
+                  )}
+                >
+                  <ServiceCard {...service} />
+                </div>
+              );
+            })}
           </div>
         )}
       </Container>
