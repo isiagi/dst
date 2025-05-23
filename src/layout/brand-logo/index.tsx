@@ -8,23 +8,23 @@ export function BrandLogo() {
   return (
     <CustomLink href="/">
       <Image
-        className="logo-dark w-[3rem] dark:hidden"
+        className="logo-light w-[2.8rem] bg-transparent dark:hidden"
         src={'/assets/images/brand/dst_ogo.png'}
         width={logoLight.width}
         height={logoLight.height}
-        placeholder="blur"
-        blurDataURL={logoLight.blurDataURL}
+        // placeholder="blur"
+        // blurDataURL={logoLight.blurDataURL}
         alt={`${process.env.NEXT_PUBLIC_SITE_NAME} brand logo`}
         sizes="100vw"
         priority
       />
       <Image
-        className="logo-dark hidden w-[3rem] dark:block"
+        className="logo-dark hidden w-[2.8rem] bg-transparent dark:block"
         src={'/assets/images/brand/dst_ogo.png'}
         width={logoDark.width}
         height={logoDark.height}
-        placeholder="blur"
-        blurDataURL={logoDark.blurDataURL}
+        // placeholder="blur"
+        // blurDataURL={logoDark.blurDataURL}
         alt={`${process.env.NEXT_PUBLIC_SITE_NAME} brand logo`}
         sizes="100vw"
         priority

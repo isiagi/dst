@@ -224,13 +224,13 @@ export function Footer({ className }: SectionProps) {
       </div>
       <div className="flex min-h-[90px] items-center border-t border-accent-800 border-opacity-20 py-5 dark:border-body dark:border-opacity-20">
         <Container>
-          <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-4 md:gap-x-10">
-            <p>{footerBottom.copyrightText}</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-10">
+            <p className="">{footerBottom.copyrightText}</p>
             {footerBottom.links && footerBottom.links.length > 0 && (
               <nav aria-label="footer bottom navigation">
                 <ul className="flex flex-wrap items-center gap-x-4  md:gap-x-7">
                   {footerBottom.links.map((link) => (
-                    <li key={link.label} className="font-semibold">
+                    <li key={link.label} className="">
                       <CustomLink
                         aria-label={`Go to page ${link.label}`}
                         href={link.href}

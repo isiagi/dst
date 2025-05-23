@@ -26,14 +26,14 @@ export function ServiceCard({
         backgroundRepeat: 'no-repeat',
       }}
       className={cn([
-        'group/service text-accent-900 shadow-3 transition-transform duration-350 dark:bg-accent-700 dark:text-white dark:shadow-none',
+        'group/service text-white shadow-3 transition-transform duration-350 dark:bg-accent-700 dark:text-white dark:shadow-none',
         'relative z-1 block h-full space-y-6 overflow-hidden rounded-5 p-6 md:space-y-7 md:p-10',
         'hover:[transform:translateY(-.5rem)]',
       ])}
     >
       {/* Background Overlay */}
 
-      <div className="pointer-events-none absolute inset-0 z-0 bg-[#bee2f7]/80 transition-all duration-300 group-hover/service:bg-[#bee2f7]/95 dark:bg-black/50" />
+      <div className="pointer-events-none absolute inset-0 z-0 bg-black/70 transition-all duration-300 group-hover/service:bg-black/85 dark:bg-black/50" />
 
       {/* Content goes here */}
       <div className="relative z-10 space-y-6">
@@ -41,12 +41,12 @@ export function ServiceCard({
           <span className="flex-none text-[2.5rem] transition-all duration-300 group-hover/service:scale-90 group-hover/service:text-primary md:text-[4rem]">
             {icon}
           </span>
-          <h2 className="text-md font-bold leading-[1.25] text-accent-900 md:text-lg dark:text-white">
+          <h2 className="text-md font-bold leading-[1.25] text-white md:text-lg dark:text-white">
             <CustomLink href={slug}>{title}</CustomLink>
           </h2>
         </div>
 
-        <p className="text-accent-900 dark:text-body">{description}</p>
+        <p className="text-white dark:text-body">{description}</p>
       </div>
       <Button
         asChild
@@ -58,7 +58,7 @@ export function ServiceCard({
           'group-hover/service:border-primary',
 
           // Light
-          'border-current bg-transparent text-accent-900 hover:border-primary hover:bg-transparent hover:text-primary',
+          'border-current bg-transparent text-white hover:border-primary hover:bg-transparent hover:text-primary',
 
           // Dark
           'dark:border-accent-900 dark:bg-accent-900 dark:text-white dark:hover:text-primary  group-hover/service:dark:bg-transparent',

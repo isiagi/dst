@@ -60,7 +60,7 @@ export const footerSectionData: FooterSectionProps = {
     ],
 
     mails: ['dst@datahubsystems.com'],
-    phoneNumbers: ['+256 724 757710', '+256 781 897616'],
+    phoneNumbers: ['+254 724 757 710 / +256 781 897 616'],
   },
   columnThree: {
     title: 'Recent Blog',
@@ -86,7 +86,6 @@ export const footerSectionData: FooterSectionProps = {
     ],
   },
   footerBottom: {
-
     copyrightText: 'Copyright 2015 - 2025 Datahub Systems Technologies Ltd.',
     links: [
       {
@@ -95,7 +94,6 @@ export const footerSectionData: FooterSectionProps = {
         openNewTab: false,
       },
       {
-
         label: 'Terms of Use',
         href: '/',
         openNewTab: false,
