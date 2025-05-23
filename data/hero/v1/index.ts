@@ -10,7 +10,7 @@ export const heroData: HeroProps = {
       title: 'Integrity at the Core of Data',
       button: {
         label: 'Discover More',
-        href: '/',
+        href: '/services/data-analytics',
       },
     },
     {
@@ -21,7 +21,7 @@ export const heroData: HeroProps = {
       title: 'Simplifying Tech, Amplifying You',
       button: {
         label: 'Discover More',
-        href: '/',
+        href: '/services/managed-services',
       },
     },
     {
@@ -32,7 +32,7 @@ export const heroData: HeroProps = {
       title: 'Secure. Smart. Scalable. DST.',
       button: {
         label: 'Discover More',
-        href: '/',
+        href: '/cybersecurity',
       },
     },
   ],

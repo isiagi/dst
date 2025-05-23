@@ -33,7 +33,7 @@ export function AboutSection() {
         <div className="grid items-center justify-center gap-12 lg:grid-cols-[.92fr_1fr] 2xl:gap-20">
           {/* Content  */}
           <div className="lg:order-2" data-aos="fade-left" data-aos-delay="200">
-            <SectionHeading {...sectionHeading} />
+            <SectionHeading {...sectionHeading} alignment="center" />
             {keyPoints && keyPoints.length > 0 && (
               <div className="mt-7 grid gap-5 text-accent-900 sm:grid-cols-2 md:mt-10 md:gap-[1.875rem] dark:text-white">
                 {keyPoints.map((keyPoint, index) => (

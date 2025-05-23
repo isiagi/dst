@@ -39,7 +39,7 @@ export function Header() {
         className={cn(
           'left-0 right-0 top-0 z-99 mx-auto hidden w-full py-[26px] lg:block',
           isSticky
-            ? 'sticky-header fixed left-0 top-0 w-full animate-fadeInDown bg-white/90 backdrop-blur-md [box-shadow:0px_0px_15px_10px_rgba(64,174,241,.1)] dark:bg-accent-900/90'
+            ? 'sticky-header left-0 top-0 w-full animate-fadeInDown bg-white/90 backdrop-blur-md [box-shadow:0px_0px_15px_10px_rgba(64,174,241,.1)] '
             : 'absolute'
         )}
       >
@@ -50,6 +50,7 @@ export function Header() {
             {/* <div className="flex-none">DST</div> */}
 
             {/* Navigation  */}
+
             {menuItems && menuItems.length > 0 && (
               <Navigation menuItems={menuItems} />
             )}

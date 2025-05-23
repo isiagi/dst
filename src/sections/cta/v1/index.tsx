@@ -8,14 +8,16 @@ import Link from 'next/link';
 
 export interface CtaSectionProps {
   title: string;
+  subTitle: string;
 }
 
 const ctaSectionData: CtaSectionProps = {
-  title: 'Have question? Feel Free To Ask...',
+  title: 'Have question?',
+  subTitle: 'Book A Free Consultation...',
 };
 
 export function CtaSection({ className }: SectionProps) {
-  const { title } = ctaSectionData;
+  const { title, subTitle } = ctaSectionData;
   return (
     <section className={cn(className)}>
       <Container>
@@ -23,6 +25,9 @@ export function CtaSection({ className }: SectionProps) {
           <div className="relative z-10 mx-auto max-w-[630px] rounded-5  text-center">
             <h2 className="mx-auto max-w-[490px] font-secondary text-xl font-bold capitalize leading-[1.25] text-white md:text-2xl">
               {title}
+            </h2>
+            <h2 className="mx-auto max-w-[620px] font-secondary text-xl font-bold capitalize leading-[1.25] text-white md:text-2xl">
+              {subTitle}
             </h2>
             <form className="mt-6 flex flex-col items-center justify-center gap-[.625rem] md:mt-[1.875rem] md:flex-row">
               {/* <TextInput

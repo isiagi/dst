@@ -21,8 +21,8 @@ export function TeamSection() {
   return (
     <section className="section-padding-primary overflow-hidden bg-accent-100 dark:bg-accent-700">
       <Container>
-        <div className="mb-10 mr-30px max-w-[680px] md:mb-[3.75rem] md:pr-[140px]">
-          <SectionHeading {...sectionHeading} />
+        <div className="mx-auto mb-10 max-w-[680px] md:mb-[3.75rem]">
+          <SectionHeading {...sectionHeading} alignment="center" />
         </div>
         {cards && cards.length > 0 && (
           <Carousel
