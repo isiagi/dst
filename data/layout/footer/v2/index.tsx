@@ -106,7 +106,7 @@ export const footerSectionData: FooterSectionProps = {
   },
   columnFour: {
     title: 'Contact Us',
-    phoneNumber: '+256 724 757710',
+    phoneNumber: '+254 724 757 710 / +256 781 897 616',
     mail: 'dst@datahubsystems.com',
 
     location:

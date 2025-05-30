@@ -14,6 +14,7 @@ import { StatisticsSection } from '@/src/sections/statistics/v1';
 import { TeamSection } from '@/src/sections/team/v1';
 import { TestimonialSection } from '@/src/sections/testimonial/v1';
 import { Metadata } from 'next';
+import { TopNavBar } from '@/src/components/top/TopNavBar';
 
 export const metadata: Metadata = {
   title: 'DST / Data meets Integrity',
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      {/* <TopNavBar /> */}
       <MainHeader version="1" />
       <Hero />
       <ServiceSection className="!pb-0" {...serviceSectionData} />
