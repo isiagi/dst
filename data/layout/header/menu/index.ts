@@ -6,19 +6,19 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
     subMenuItems: [
       {
         label: 'Application Development',
-        href: '',
+        href: '/services/software-solutions',
       },
       {
         label: 'Cybersecurity',
-        href: '',
+        href: '/services/cybersecurity',
       },
       {
         label: 'Data Analytics',
-        href: '',
+        href: '/services/data-analytics',
       },
       {
         label: 'Managed Services',
-        href: '',
+        href: '/services/managed-services',
       },
     ],
   },
@@ -27,11 +27,11 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
     subMenuItems: [
       {
         label: 'Call Us',
-        href: '',
+        href: '/contact',
       },
       {
         label: 'Email Us',
-        href: '',
+        href: '/contact',
       },
       {
         label: 'Support Plans',
@@ -65,11 +65,11 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
     subMenuItems: [
       {
         label: 'Our Company',
-        href: '',
+        href: '/about',
       },
       {
         label: 'Contact Us',
-        href: '',
+        href: '/contact',
       },
       {
         label: 'Trust Center',
@@ -97,7 +97,7 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
       },
       {
         label: 'DST Blog',
-        href: '',
+        href: '/blog',
       },
       {
         label: 'Publication',

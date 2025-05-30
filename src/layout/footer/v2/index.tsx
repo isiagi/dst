@@ -242,15 +242,15 @@ export function Footer({ className, footerTopClassName }: Props) {
         </div>
 
         {/* Footer bottom  */}
-        <div className="flex min-h-[90px] items-center py-5">
+        <div className="flex min-h-[90px] items-center">
           <Container>
-            <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-4 md:gap-x-10">
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-10">
               <p>{footerBottom.copyrightText}</p>
               {footerBottom.links && footerBottom.links.length > 0 && (
                 <nav aria-label="footer bottom navigation">
                   <ul className="flex flex-wrap items-center gap-x-4  md:gap-x-7">
                     {footerBottom.links.map((link) => (
-                      <li key={link.label} className="font-semibold">
+                      <li key={link.label} className="">
                         <CustomLink
                           href={link.href}
                           openNewTab={link.openNewTab}

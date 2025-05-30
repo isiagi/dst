@@ -34,7 +34,7 @@ export const contactSectionData: ContactSectionProps = {
     box: 'P.O. Box 717 - 00515, Nairobi',
 
     mail: 'feedback@datahubsystems.com',
-    phone: '+256 724 757710',
+    phone: '+254 724 757 710 / +256 781 897 616',
   },
 };
 

@@ -7,7 +7,6 @@ export const headerData: HeaderProps = {
     mail: 'dst@datahubsystems.com',
 
     address: '4th Floor (Suite 4-2), Top Plaza Building, Nairobi',
-
   },
   ctaBtn: {
     href: '/contact',
