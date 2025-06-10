@@ -41,6 +41,7 @@ export interface FooterSectionProps {
     location: string;
     mail: string;
     phoneNumber: string;
+    boxNumber: string;
   };
   footerBottom: {
     copyrightText: string;
@@ -232,9 +233,14 @@ export function Footer({ className, footerTopClassName }: Props) {
                   <span className={addressIconParentClasses}>
                     <FaMapMarkerAlt />
                   </span>
-                  <address className="not-italic">
-                    {columnFour.location}
-                  </address>
+                  <span className="flex flex-col">
+                    <address className="not-italic">
+                      {columnFour.location}
+                    </address>
+                    <address className="not-italic">
+                      {columnFour.boxNumber}
+                    </address>
+                  </span>
                 </li>
               </ul>
             </div>

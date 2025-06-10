@@ -12,8 +12,8 @@ export interface CtaSectionProps {
 }
 
 const ctaSectionData: CtaSectionProps = {
-  title: 'Have question?',
-  subTitle: 'Book A Free Consultation...',
+  title: 'Having any question?',
+  subTitle: 'Book Free Consultation...',
 };
 
 export function CtaSection({ className }: SectionProps) {
@@ -21,12 +21,12 @@ export function CtaSection({ className }: SectionProps) {
   return (
     <section className={cn(className)}>
       <Container>
-        <div className="relative overflow-hidden rounded-5 bg-primary px-6 py-14">
+        <div className="relative mx-20 overflow-hidden rounded-5 bg-primary px-6 py-14">
           <div className="relative z-10 mx-auto max-w-[630px] rounded-5  text-center">
-            <h2 className="mx-auto max-w-[490px] font-secondary text-xl font-bold capitalize leading-[1.25] text-white md:text-2xl">
+            <h2 className="mx-auto max-w-[490px] font-secondary text-xl font-normal capitalize leading-[1.25] text-white md:text-2xl">
               {title}
             </h2>
-            <h2 className="mx-auto max-w-[620px] font-secondary text-xl font-bold capitalize leading-[1.25] text-white md:text-2xl">
+            <h2 className="mx-auto max-w-[620px] font-secondary text-xl font-normal capitalize leading-[1.25] text-white md:text-2xl">
               {subTitle}
             </h2>
             <form className="mt-6 flex flex-col items-center justify-center gap-[.625rem] md:mt-[1.875rem] md:flex-row">

@@ -4,14 +4,11 @@ import { LinkProps } from '@/src/common-types';
 import { Container } from '@/src/components/container';
 import { BrandLogo } from '../../../brand-logo';
 import { ContactBox, ContactBoxProps } from './contact-box';
-import { useStickyHeader } from '../../utils/use-sticky-header';
 import { cn } from '@/src/utils/shadcn';
 import { Navigation } from '../common/navigation';
 import { headerData } from 'data/layout/header/v1';
-import { CSSTransition } from 'react-transition-group';
-import { SearchModal } from '../v2/search-modal';
-import styles from '../v2/header.module.css';
-import { useState } from 'react';
+import { SearchDropdown } from '../v2/search-modal';
+import { useState, useEffect, useRef } from 'react';
 import { FaMagnifyingGlass, FaGlobe, FaChevronDown } from 'react-icons/fa6';
 
 interface SubMenu {
@@ -30,18 +27,162 @@ const actionIconClasses = cn(
 
 // Language options - you can expand this array
 const languages = [
+  { code: 'sw', name: 'Kiswahili', flag: '🇩🇪' },
   { code: 'en', name: 'English', flag: '🇺🇸' },
   { code: 'es', name: 'Español', flag: '🇪🇸' },
   { code: 'fr', name: 'Français', flag: '🇫🇷' },
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
 ];
 
+// Custom hook for page-based sticky header behavior
+function usePageBasedStickyHeader(
+  threshold: number = 700,
+  delay: number = 3000
+) {
+  const [isSticky, setIsSticky] = useState(false);
+  const [shouldShowSticky, setShouldShowSticky] = useState(false);
+  const [isAnimatingOut, setIsAnimatingOut] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const animationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const lastScrollY = useRef(0);
+  const scrollDistance = useRef(0);
+  const isScrollingUp = useRef(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollDirection =
+        currentScrollY > lastScrollY.current ? 'down' : 'up';
+      const passedThreshold = currentScrollY > threshold;
+
+      // Calculate scroll distance when scrolling down
+      if (scrollDirection === 'down') {
+        if (!isScrollingUp.current) {
+          // Continue accumulating scroll distance when scrolling down
+          scrollDistance.current += Math.abs(
+            currentScrollY - lastScrollY.current
+          );
+        } else {
+          // Reset distance when changing from up to down
+          scrollDistance.current = Math.abs(
+            currentScrollY - lastScrollY.current
+          );
+          isScrollingUp.current = false;
+        }
+
+        // Check if user has scrolled a full page (viewport height) down
+        const viewportHeight = window.innerHeight;
+        if (
+          passedThreshold &&
+          scrollDistance.current >= viewportHeight &&
+          !shouldShowSticky
+        ) {
+          // Show sticky header immediately
+          setIsSticky(true);
+          setShouldShowSticky(true);
+          setIsAnimatingOut(false);
+
+          // Clear any existing timeouts
+          if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+          }
+          if (animationTimeoutRef.current) {
+            clearTimeout(animationTimeoutRef.current);
+          }
+
+          // Set timeout to start slide-up animation after delay
+          timeoutRef.current = setTimeout(() => {
+            setIsAnimatingOut(true);
+
+            // After animation completes, fully hide the header
+            animationTimeoutRef.current = setTimeout(() => {
+              setShouldShowSticky(false);
+              setIsSticky(false);
+              setIsAnimatingOut(false);
+            }, 500); // Animation duration
+          }, delay);
+
+          // Reset scroll distance after triggering
+          scrollDistance.current = 0;
+        }
+      } else if (scrollDirection === 'up') {
+        // User is scrolling up
+        isScrollingUp.current = true;
+        scrollDistance.current = 0; // Reset scroll distance
+
+        if (passedThreshold) {
+          // Show sticky header when scrolling up (stays fixed)
+          setIsSticky(true);
+          setShouldShowSticky(true);
+          setIsAnimatingOut(false);
+
+          // Clear any existing timeouts
+          if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+          }
+          if (animationTimeoutRef.current) {
+            clearTimeout(animationTimeoutRef.current);
+          }
+
+          // Set timeout for 3-second delay before hiding
+          timeoutRef.current = setTimeout(() => {
+            setIsAnimatingOut(true);
+
+            // After animation completes, fully hide the header
+            animationTimeoutRef.current = setTimeout(() => {
+              setShouldShowSticky(false);
+              setIsSticky(false);
+              setIsAnimatingOut(false);
+            }, 500); // Animation duration
+          }, delay);
+        }
+      }
+
+      // Reset everything when scrolled back to top
+      if (!passedThreshold) {
+        setIsSticky(false);
+        setShouldShowSticky(false);
+        setIsAnimatingOut(false);
+        scrollDistance.current = 0;
+        isScrollingUp.current = false;
+
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+        if (animationTimeoutRef.current) {
+          clearTimeout(animationTimeoutRef.current);
+        }
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+      if (animationTimeoutRef.current) {
+        clearTimeout(animationTimeoutRef.current);
+      }
+    };
+  }, [threshold, delay]);
+
+  return { shouldShowSticky, isAnimatingOut };
+}
+
 export function Header() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
   const { menuItems, contactInfo } = headerData;
-  const isSticky = useStickyHeader(700);
+
+  // Use the page-based sticky header hook
+  const { shouldShowSticky, isAnimatingOut } = usePageBasedStickyHeader(
+    100,
+    3000
+  );
 
   const handleLanguageChange = (language: (typeof languages)[0]) => {
     setSelectedLanguage(language);
@@ -54,13 +195,13 @@ export function Header() {
       {/* Top Navigation Bar */}
       <div className="absolute left-0 right-0 top-0 z-[100] w-full bg-accent-100 bg-opacity-70 dark:bg-accent-700">
         <Container>
-          <div className="flex items-center justify-end py-2">
+          <div className="flex items-center justify-end">
             <div className="flex items-center gap-6 text-sm">
               {/* Language Selector */}
               <div className="relative">
                 <button
                   onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
-                  className="flex items-center gap-2 rounded-md px-3 py-1 text-white/80 transition-colors duration-300 hover:bg-white/10 hover:text-white"
+                  className="flex items-center gap-2 rounded-md px-3 py-1 text-black/90 transition-colors duration-300 hover:bg-white/10 hover:text-[#40AEF1]"
                   aria-label="Language selector"
                 >
                   <FaGlobe className="text-sm" />
@@ -91,8 +232,8 @@ export function Header() {
                               : 'text-gray-700'
                           )}
                         >
-                          <span>{language.flag}</span>
-                          <span>{language.name}</span>
+                          <span className="text-black">{language.flag}</span>
+                          <span className="text-black">{language.name}</span>
                         </button>
                       ))}
                     </div>
@@ -101,9 +242,6 @@ export function Header() {
               </div>
 
               {/* Future additions can go here */}
-              {/* Example: User account, notifications, etc. */}
-
-              {/* Placeholder for future items */}
               <div className="flex items-center gap-4">
                 {/* Add more top nav items here in the future */}
               </div>
@@ -112,59 +250,92 @@ export function Header() {
         </Container>
       </div>
 
+      {/* Custom CSS for animations */}
+      <style jsx>{`
+        @keyframes slideUpAndFade {
+          0% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+        }
+
+        @keyframes slideDown {
+          0% {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+
+        .animate-slideUpAndFade {
+          animation: slideUpAndFade 0.5s ease-in-out forwards;
+        }
+
+        .animate-slideDown {
+          animation: slideDown 0.3s ease-out;
+        }
+      `}</style>
+
       {/* Main Header */}
       <header
         className={cn(
-          'left-0 right-0 z-99 mx-auto hidden w-full py-[26px] lg:block',
-          isSticky
-            ? 'sticky-header left-0 top-0 w-full animate-fadeInDown bg-white/90 backdrop-blur-md [box-shadow:0px_0px_15px_10px_rgba(64,174,241,.1)]'
-            : 'absolute top-10' // Added top-10 to account for top nav
+          'left-0 right-0 z-99 mx-auto hidden w-full px-10 py-[26px] transition-all duration-300 ease-in-out lg:block',
+          shouldShowSticky
+            ? cn(
+                'fixed top-0 w-full bg-white/90 backdrop-blur-md [box-shadow:0px_0px_15px_10px_rgba(64,174,241,.1)]',
+                isAnimatingOut ? 'animate-slideUpAndFade' : 'animate-slideDown'
+              )
+            : 'absolute top-5'
         )}
       >
         <Container>
           <div className="flex items-center justify-between gap-x-10">
             {/* Brand logo  */}
-            <div className="flex-none">{<BrandLogo />}</div>
-            {/* <div className="flex-none">DST</div> */}
+            <div className="flex-none">
+              <BrandLogo />
+            </div>
 
             {/* Navigation  */}
             {menuItems && menuItems.length > 0 && (
               <Navigation menuItems={menuItems} />
             )}
+
             <div className="flex items-center gap-10">
               {/* Contact box  */}
               <ContactBox {...contactInfo} />
-              <div>
+
+              <div className="relative">
                 <ul aria-label="header actions">
                   <li>
                     <button
                       aria-label="Search toggle handler"
-                      className={actionIconClasses}
-                      onClick={() => setIsModalOpen((prevState) => !prevState)}
+                      className={cn(
+                        actionIconClasses,
+                        isSearchOpen && 'text-primary'
+                      )}
+                      onClick={() => setIsSearchOpen(!isSearchOpen)}
                     >
                       <FaMagnifyingGlass />
                     </button>
                   </li>
                 </ul>
+                {/* Search Dropdown */}
+                <SearchDropdown
+                  isOpen={isSearchOpen}
+                  setIsOpen={setIsSearchOpen}
+                />
               </div>
             </div>
           </div>
         </Container>
       </header>
-
-      {/* Search Modal */}
-      <CSSTransition
-        in={isModalOpen}
-        timeout={500}
-        classNames={{
-          enter: styles['modal-enter'],
-          enterActive: styles['modal-enter-active'],
-          exitActive: styles['modal-exit-active'],
-        }}
-        unmountOnExit
-      >
-        <SearchModal setIsModalOpen={setIsModalOpen} />
-      </CSSTransition>
 
       {/* Click outside handler for language dropdown */}
       {isLangDropdownOpen && (

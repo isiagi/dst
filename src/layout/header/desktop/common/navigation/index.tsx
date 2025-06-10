@@ -24,6 +24,15 @@ const menuTriggerClasses = cn([
 ]);
 
 export function Navigation({ menuItems }: Pick<HeaderProps, 'menuItems'>) {
+  // Helper function to chunk array into groups of 5
+  const chunkArray = (array: any[], chunkSize: number) => {
+    const chunks = [];
+    for (let i = 0; i < array.length; i += chunkSize) {
+      chunks.push(array.slice(i, i + chunkSize));
+    }
+    return chunks;
+  };
+
   return (
     <nav aria-label="primary navigation">
       <ul className="flex items-center gap-x-6">
@@ -42,8 +51,11 @@ export function Navigation({ menuItems }: Pick<HeaderProps, 'menuItems'>) {
                   <nav
                     aria-label="sumenu-items"
                     className={cn([
-                      // Layout
-                      'absolute  left-0 top-full z-40 w-[230px] overflow-hidden bg-accent-700 shadow-lg dark:bg-accent-700',
+                      // Layout - Dynamic width based on item count
+                      'absolute left-0 top-full z-40 overflow-hidden bg-white shadow-lg dark:bg-accent-700',
+
+                      // Width based on whether we have more than 5 items
+                      menuItem.subMenuItems.length > 5 ? 'w-auto' : 'w-[230px]',
 
                       // Submenu normal
                       'origin-[0_0_0] scale-y-0 transition-transform duration-350',
@@ -52,19 +64,48 @@ export function Navigation({ menuItems }: Pick<HeaderProps, 'menuItems'>) {
                       'group-hover/menu-item:scale-y-100',
                     ])}
                   >
-                    <ul className="grid divide-y divide-white/5">
-                      {menuItem.subMenuItems.map((subMenuItem, index) => (
-                        <li key={index} className="leading-none">
-                          <CustomLink
-                            href={subMenuItem.href}
-                            openNewTab={subMenuItem.openNewTab}
-                            className="flex min-h-[50px] items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-white transition-colors duration-200 hover:bg-primary  dark:text-white"
-                          >
-                            {subMenuItem.label}
-                          </CustomLink>
-                        </li>
-                      ))}
-                    </ul>
+                    {menuItem.subMenuItems.length > 5 ? (
+                      // Multi-column layout for more than 5 items
+                      <div className="flex">
+                        {chunkArray(menuItem.subMenuItems, 5).map(
+                          (chunk, columnIndex) => (
+                            <div
+                              key={columnIndex}
+                              className="w-[230px] border-r border-white/5 last:border-r-0"
+                            >
+                              <ul className="grid divide-y divide-white/5">
+                                {chunk.map((subMenuItem, itemIndex) => (
+                                  <li key={itemIndex} className="leading-none">
+                                    <CustomLink
+                                      href={subMenuItem.href}
+                                      openNewTab={subMenuItem.openNewTab}
+                                      className="flex min-h-[50px] items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-black transition-colors duration-200 hover:bg-primary hover:text-white  dark:text-white"
+                                    >
+                                      {subMenuItem.label}
+                                    </CustomLink>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )
+                        )}
+                      </div>
+                    ) : (
+                      // Single column layout for 5 or fewer items
+                      <ul className="grid divide-y divide-white/5">
+                        {menuItem.subMenuItems.map((subMenuItem, index) => (
+                          <li key={index} className="leading-none">
+                            <CustomLink
+                              href={subMenuItem.href}
+                              openNewTab={subMenuItem.openNewTab}
+                              className="flex min-h-[50px] items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-black transition-colors duration-200 hover:bg-primary hover:text-white  dark:text-white"
+                            >
+                              {subMenuItem.label}
+                            </CustomLink>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </nav>
                 )}
               </>

@@ -1,7 +1,8 @@
 import { LinkProps } from '@/src/common-types';
 import Link from 'next/link';
-import { useEffect } from 'react';
-import { IoClose } from 'react-icons/io5'; // X icon
+import { useEffect, useRef } from 'react';
+import { IoClose } from 'react-icons/io5';
+import { FaMagnifyingGlass } from 'react-icons/fa6';
 
 const suggestions: LinkProps[] = [
   { href: '/about', label: 'About Us' },
@@ -10,63 +11,78 @@ const suggestions: LinkProps[] = [
   { href: '/blog', label: 'Blog' },
 ];
 
-export function SearchModal({
-  setIsModalOpen,
+export function SearchDropdown({
+  isOpen,
+  setIsOpen,
 }: {
-  setIsModalOpen: (v: boolean) => void;
+  isOpen: boolean;
+  setIsOpen: (v: boolean) => void;
 }) {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Focus input when dropdown opens
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isOpen]);
+
   // Close on ESC key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        setIsModalOpen(false);
+        setIsOpen(false);
       }
     };
-    document.addEventListener('keydown', handleKeyDown);
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+    }
+
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [setIsModalOpen]);
+  }, [isOpen, setIsOpen]);
+
+  if (!isOpen) return null;
 
   return (
-    <div
-      className="fixed inset-0 z-[100] flex items-start justify-center bg-black/60 p-4 pt-32"
-      onClick={() => setIsModalOpen(false)} // Close on backdrop click
-    >
-      <div
+    <>
+      {/* Backdrop */}
+      <div className="fixed inset-0 z-[98]" onClick={() => setIsOpen(false)} />
 
-        className="relative w-full max-w-xl rounded-xl bg-white p-6 shadow-lg dark:bg-accent-800"
-        onClick={(e) => e.stopPropagation()} // Prevent closing on modal content click
-
-      >
-        {/* Close Button */}
-        <button
-          onClick={() => setIsModalOpen(false)}
-          className="absolute -top-20 right-4 text-xl text-white hover:text-black dark:text-white dark:hover:text-gray-300"
-          aria-label="Close search modal"
-        >
-          <IoClose />
-        </button>
-
-        {/* Search Input */}
-        <div className="mb-4">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="w-full rounded-md border border-gray-300 p-3 focus:border-primary focus:outline-none dark:bg-accent-900 dark:text-white"
-          />
+      {/* Search Dropdown */}
+      <div className="dark:border-accent-600 absolute right-0 top-full z-[99] mt-2 w-80 rounded-lg border border-gray-200 bg-white shadow-lg dark:bg-accent-800">
+        {/* Search Input Section */}
+        <div className="dark:border-accent-600 relative border-b border-gray-200 p-4">
+          <div className="relative">
+            <FaMagnifyingGlass className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <input
+              ref={inputRef}
+              type="text"
+              placeholder="Search..."
+              className="dark:border-accent-600 w-full rounded-md border border-gray-300 py-2 pl-10 pr-10 focus:border-primary focus:outline-none dark:bg-accent-900 dark:text-white dark:placeholder-gray-400"
+            />
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+              aria-label="Close search"
+            >
+              <IoClose className="text-lg" />
+            </button>
+          </div>
         </div>
 
-        {/* Suggestions */}
-        <div>
-          <h3 className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-300">
-            Suggestions
+        {/* Suggestions Section */}
+        <div className="p-4">
+          <h3 className="mb-3 text-sm font-semibold text-gray-600 dark:text-gray-300">
+            Quick Links
           </h3>
-          <ul className="space-y-2">
+          <ul className="space-y-1">
             {suggestions.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="block rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-accent-700"
-                  onClick={() => setIsModalOpen(false)} // Close when a link is clicked
+                  className="block rounded-md px-3 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-accent-700"
+                  onClick={() => setIsOpen(false)}
                 >
                   {item.label}
                 </Link>
@@ -75,6 +91,6 @@ export function SearchModal({
           </ul>
         </div>
       </div>
-    </div>
+    </>
   );
 }

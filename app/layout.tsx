@@ -13,7 +13,7 @@ interface Props {
 }
 
 export const metadata: Metadata = {
-  title: 'DST / Data meets Integrity',
+  title: 'DST - Data meets Integrity',
   description:
     'Datahub Systems Technologies (DST) is a trusted provider of innovative IT solutions designed to help businesses navigate the fast-evolving digital landscape.',
 };
