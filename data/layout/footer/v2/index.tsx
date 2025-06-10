@@ -106,12 +106,16 @@ export const footerSectionData: FooterSectionProps = {
   },
   columnFour: {
     title: 'Contact Us',
-    phoneNumber: '+254 724 757 710 / +256 781 897 616',
-    mail: 'dst@datahubsystems.com',
+
+    phoneNumber: '+254 104 757 710 / +256 781 897 616',
+    mail: 'support@datahubsystems.com',
+
 
     location:
-      '4th Floor (Suite 4-2) Top Plaza Building Kindaruma Road (Off Ngong’ Road) P.O. Box 717 - 00515, Nairobi, Kenya',
+      '4th Floor (Suite 4-2) Top Plaza Building Kindaruma Road (Off Ngong’ Road)',
+    boxNumber: 'P.O. Box 717 - 00515, Nairobi, Kenya',
   },
+
   footerBottom: {
     copyrightText: 'Copyright 2015 - 2025 Datahub Systems Technologies Ltd.',
     links: [

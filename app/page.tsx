@@ -28,15 +28,15 @@ export default function Page() {
       {/* <TopNavBar /> */}
       <MainHeader version="1" />
       <Hero />
-      <ServiceSection className="!pb-0" {...serviceSectionData} />
-      <AboutSection />
+      <ServiceSection {...serviceSectionData} />
+      {/* <AboutSection /> */}
       <CtaSection />
       <ProjectSection {...projectSectionData} />
       <StatisticsSection />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       {/* <PricingSection /> */}
-      <TeamSection />
-      <ContactSection />
+      {/* <TeamSection /> */}
+      {/* <ContactSection /> */}
       <BlogSection />
       <Footer />
     </>

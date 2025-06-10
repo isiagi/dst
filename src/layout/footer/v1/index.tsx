@@ -39,6 +39,8 @@ export interface FooterSectionProps {
     location: string[];
     mails: string[];
     phoneNumbers: string[];
+    boxNumber: string;
+    place: string;
   };
   columnThree: {
     title: string;
@@ -70,7 +72,7 @@ export function Footer({ className }: SectionProps) {
   return (
     <footer
       className={cn(
-        'overflow-hidden bg-accent-100 text-accent-800 dark:bg-accent-900 dark:text-body',
+        'overflow-hidden bg-accent-100 px-20 text-accent-800 dark:bg-accent-900 dark:text-body',
         className
       )}
     >
@@ -137,7 +139,15 @@ export function Footer({ className }: SectionProps) {
                   <span className={addressIconParentClasses}>
                     <FaPaperPlane />
                   </span>
-                  <address className="not-italic">{columnTwo.location}</address>
+                  <span className="flex flex-col">
+                    <address className="not-italic">
+                      {columnTwo.location}
+                    </address>
+                    <address className="not-italic">{columnTwo.place}</address>
+                    <address className="not-italic">
+                      {columnTwo.boxNumber}
+                    </address>
+                  </span>
                 </li>
                 <li className={addressItemClasses}>
                   <span className={addressIconParentClasses}>
@@ -225,12 +235,12 @@ export function Footer({ className }: SectionProps) {
       <div className="flex min-h-[90px] items-center border-t border-accent-800 border-opacity-20 py-5 dark:border-body dark:border-opacity-20">
         <Container>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-10">
-            <p className="">{footerBottom.copyrightText}</p>
+            <p className="text-sm">{footerBottom.copyrightText}</p>
             {footerBottom.links && footerBottom.links.length > 0 && (
               <nav aria-label="footer bottom navigation">
                 <ul className="flex flex-wrap items-center gap-x-4  md:gap-x-7">
                   {footerBottom.links.map((link) => (
-                    <li key={link.label} className="">
+                    <li key={link.label} className="text-sm">
                       <CustomLink
                         aria-label={`Go to page ${link.label}`}
                         href={link.href}

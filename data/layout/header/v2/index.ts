@@ -3,7 +3,7 @@ import { menuItemsProps } from '../menu';
 
 export const headerData: HeaderProps = {
   contactInfo: {
-    phone: '+256 724 757710',
+    phone: '+254 104 757710',
     mail: 'dst@datahubsystems.com',
 
     address: '4th Floor (Suite 4-2), Top Plaza Building, Nairobi',

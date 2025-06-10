@@ -109,12 +109,13 @@ export function ContactBox({ title, phone }: ContactBoxProps) {
           </clipPath>
         </defs>
       </svg> */}
-      <MdChatBubble size={30} />
+      {/* <MdChatBubble size={30} /> */}
       <div>
         <p>{title}</p>
         <a
           href={`tel:${phone.split(' ').join('')}`}
-          className="block font-secondary text-md font-bold leading-[1.3]"
+          className="block font-secondary text-[1rem] text-md font-medium
+           leading-[1.3]"
         >
           {phone}
         </a>

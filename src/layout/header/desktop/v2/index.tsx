@@ -17,10 +17,8 @@ import {
 import { Button } from '@/src/components/button';
 import { CustomLink } from '@/src/components/custom-link';
 import { headerData } from '@/data/layout/header/v2';
-import { CSSTransition } from 'react-transition-group';
-import styles from './header.module.css';
 import { useState } from 'react';
-import { SearchModal } from './search-modal';
+import { SearchDropdown } from './search-modal';
 import { OffCanvas } from './off-canvas';
 
 interface SubMenu {
@@ -48,7 +46,7 @@ const actionIconClasses = cn(
 );
 
 export function Header() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const isSticky = useStickyHeader(700);
 
   const { contactInfo, ctaBtn, menuItems } = headerData;
@@ -112,21 +110,31 @@ export function Header() {
                 {menuItems && menuItems.length > 0 && (
                   <Navigation menuItems={menuItems} />
                 )}
-                <div>
+                <div className="relative">
+                  {' '}
+                  {/* Added relative positioning */}
                   <ul
                     aria-label="header actions"
                     className="flex items-center gap-30px"
                   >
-                    <li>
+                    <li className="relative">
+                      {' '}
+                      {/* Added relative positioning for search */}
                       <button
                         aria-label="Search toggle handler"
-                        className={actionIconClasses}
-                        onClick={() =>
-                          setIsModalOpen((prevState) => !prevState)
-                        }
+                        className={cn(
+                          actionIconClasses,
+                          isSearchOpen && 'text-primary' // Highlight when active
+                        )}
+                        onClick={() => setIsSearchOpen(!isSearchOpen)}
                       >
                         <FaMagnifyingGlass />
                       </button>
+                      {/* Search Dropdown - positioned relative to the search button */}
+                      <SearchDropdown
+                        isOpen={isSearchOpen}
+                        setIsOpen={setIsSearchOpen}
+                      />
                     </li>
                     {/* <li>
                       <span className={actionIconClasses}>
@@ -143,19 +151,6 @@ export function Header() {
           </div>
         </Container>
       </header>
-
-      <CSSTransition
-        in={isModalOpen}
-        timeout={500}
-        classNames={{
-          enter: styles['modal-enter'],
-          enterActive: styles['modal-enter-active'],
-          exitActive: styles['modal-exit-active'],
-        }}
-        unmountOnExit
-      >
-        <SearchModal setIsModalOpen={setIsModalOpen} />
-      </CSSTransition>
     </>
   );
 }

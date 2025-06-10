@@ -28,7 +28,7 @@ export default function Page() {
         serviceImage="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29udGFjdCUyMHVzfGVufDB8fDB8fHww"
       />
       <ContactSection />
-      <MapSection />
+      {/* <MapSection /> */}
       <Footer />
     </>
   );

@@ -2,7 +2,7 @@ import { BlogSectionProps } from '@/src/sections/blog/v1';
 
 export const blogSectionData: BlogSectionProps = {
   sectionHeading: {
-    subtitle: 'our blogs',
+    subtitle: 'News And Events',
     title: 'Transforming Challenges into Seamless Solutions',
   },
   blogs: [

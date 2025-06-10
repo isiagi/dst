@@ -28,15 +28,15 @@ export function SectionHeading({
       {subtitle && (
         <span
           className={
-            'mb-[.625rem] block font-secondary text-base	 font-bold uppercase leading-[1.5] tracking-widest text-primary md:text-md'
+            'mb-[.625rem] block font-secondary text-base	 font-normal capitalize leading-[1.5] text-primary md:text-2xl'
           }
         >
           {subtitle}
         </span>
       )}
-      <h2 className="font-secondary text-xl font-bold leading-[1.25] text-accent-900 dark:text-white md:text-2xl">
+      <h4 className="font-secondary text-xl font-normal leading-[1.25] text-accent-900 md:text-lg dark:text-white">
         {title}
-      </h2>
+      </h4>
       {description && (
         <p className={'mt-5 whitespace-pre-line'}>{description}</p>
       )}
