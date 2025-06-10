@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { cn } from '@/src/utils/shadcn';
 import { CustomLink } from '@/src/components/custom-link';
 import { HeaderProps } from '../../v1';
