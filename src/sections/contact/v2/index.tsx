@@ -33,8 +33,10 @@ export const contactSectionData: ContactSectionProps = {
     road: 'Kindaruma Road (Off Ngong’ Road)',
     box: 'P.O. Box 717 - 00515, Nairobi',
 
+
     mail: 'support@datahubsystems.com',
     phone: '+254 104 757 710 / +256 781 897 616',
+
   },
 };
 

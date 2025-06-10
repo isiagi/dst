@@ -7,8 +7,10 @@ import { ContactBox, ContactBoxProps } from './contact-box';
 import { cn } from '@/src/utils/shadcn';
 import { Navigation } from '../common/navigation';
 import { headerData } from 'data/layout/header/v1';
+
 import { SearchDropdown } from '../v2/search-modal';
 import { useState, useEffect, useRef } from 'react';
+
 import { FaMagnifyingGlass, FaGlobe, FaChevronDown } from 'react-icons/fa6';
 
 interface SubMenu {
@@ -27,12 +29,15 @@ const actionIconClasses = cn(
 
 // Language options - you can expand this array
 const languages = [
+
   { code: 'sw', name: 'Kiswahili', flag: '🇩🇪' },
+
   { code: 'en', name: 'English', flag: '🇺🇸' },
   { code: 'es', name: 'Español', flag: '🇪🇸' },
   { code: 'fr', name: 'Français', flag: '🇫🇷' },
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
 ];
+
 
 // Custom hook for page-based sticky header behavior
 function usePageBasedStickyHeader(
@@ -174,6 +179,7 @@ function usePageBasedStickyHeader(
 
 export function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
   const { menuItems, contactInfo } = headerData;
@@ -190,18 +196,28 @@ export function Header() {
     // Add your language change logic here
   };
 
+  const handleLanguageChange = (language: (typeof languages)[0]) => {
+    setSelectedLanguage(language);
+    setIsLangDropdownOpen(false);
+    // Add your language change logic here
+  };
+
   return (
     <>
       {/* Top Navigation Bar */}
       <div className="absolute left-0 right-0 top-0 z-[100] w-full bg-accent-100 bg-opacity-70 dark:bg-accent-700">
         <Container>
+
           <div className="flex items-center justify-end">
+
             <div className="flex items-center gap-6 text-sm">
               {/* Language Selector */}
               <div className="relative">
                 <button
                   onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
+
                   className="flex items-center gap-2 rounded-md px-3 py-1 text-black/90 transition-colors duration-300 hover:bg-white/10 hover:text-[#40AEF1]"
+
                   aria-label="Language selector"
                 >
                   <FaGlobe className="text-sm" />
@@ -232,8 +248,10 @@ export function Header() {
                               : 'text-gray-700'
                           )}
                         >
+
                           <span className="text-black">{language.flag}</span>
                           <span className="text-black">{language.name}</span>
+
                         </button>
                       ))}
                     </div>
@@ -242,6 +260,7 @@ export function Header() {
               </div>
 
               {/* Future additions can go here */}
+
               <div className="flex items-center gap-4">
                 {/* Add more top nav items here in the future */}
               </div>
@@ -249,6 +268,7 @@ export function Header() {
           </div>
         </Container>
       </div>
+
 
       {/* Custom CSS for animations */}
       <style jsx>{`
@@ -293,6 +313,7 @@ export function Header() {
                 isAnimatingOut ? 'animate-slideUpAndFade' : 'animate-slideDown'
               )
             : 'absolute top-5'
+
         )}
       >
         <Container>
@@ -336,6 +357,7 @@ export function Header() {
           </div>
         </Container>
       </header>
+
 
       {/* Click outside handler for language dropdown */}
       {isLangDropdownOpen && (
