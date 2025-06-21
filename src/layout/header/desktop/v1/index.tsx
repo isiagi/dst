@@ -29,12 +29,11 @@ const actionIconClasses = cn(
 
 // Language options - you can expand this array
 const languages = [
-  { code: 'sw', name: 'Kiswahili', flag: '🇩🇪' },
+  { code: 'sw', name: 'Kiswahili', flag: '🇹🇿' },
 
   { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
+
   { code: 'fr', name: 'Français', flag: '🇫🇷' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
 ];
 
 // Custom hook for page-based sticky header behavior

@@ -18,7 +18,7 @@ const sectionHeading: any = {
 
 export function ServiceSection({ services, className }: ServiceSectionProps) {
   return (
-    <section className={cn('section-padding-primary px-20', className)}>
+    <section className={cn(className)}>
       <div className="mx-auto mb-10 flex w-full max-w-[680px] flex-col gap-5 md:mb-[3.75rem]">
         <SectionHeading {...sectionHeading} alignment="center" />
       </div>

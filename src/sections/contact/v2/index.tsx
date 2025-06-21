@@ -33,10 +33,8 @@ export const contactSectionData: ContactSectionProps = {
     road: 'Kindaruma Road (Off Ngong’ Road)',
     box: 'P.O. Box 717 - 00515, Nairobi',
 
-
     mail: 'support@datahubsystems.com',
     phone: '+254 104 757 710 / +256 781 897 616',
-
   },
 };
 
@@ -53,8 +51,8 @@ export function ContactSection() {
   return (
     <section className="section-padding-primary">
       <Container>
-        <div className="flex flex-col gap-[50px] px-20 md:flex-row">
-          <div className="md:w-1/2 lg:w-2/3">
+        <div className="flex flex-col gap-[70px] md:flex-row">
+          <div className="md:w-1/2 lg:w-2/4">
             <div className="mb-30px">
               <SectionHeading {...sectionHeading} />
             </div>

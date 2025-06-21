@@ -17,7 +17,7 @@ export function BlogSection({ className }: SectionProps) {
   return (
     <section
       className={cn(
-        'section-padding-primary overflow-hidden bg-white px-20 dark:bg-accent-700 [.light_&]:pt-0',
+        'overflow-hidden bg-white dark:bg-accent-700 [.light_&]:pt-0',
         className
       )}
     >
@@ -45,7 +45,7 @@ export function BlogSection({ className }: SectionProps) {
             ))}
           </div>
         )}
-        {/* <h1 className="font-secondary text-xl font-bold leading-[1.25] text-accent-900 dark:text-white md:text-2xl">
+        {/* <h1 className="font-secondary text-xl font-bold leading-[1.25] text-accent-900 md:text-2xl dark:text-white">
           Coming Soon...
         </h1> */}
       </Container>

@@ -22,7 +22,7 @@ export interface TestimonialSectionProps {
 export function TestimonialSection() {
   const { sectionHeading, cards } = testimonialSectionData;
   return (
-    <section className="section-padding-primary overflow-hidden">
+    <section className="section-padding-primary overflow-hidden px-20">
       <Container>
         <div className="mx-auto mb-10  max-w-[680px] md:mb-[3.75rem]">
           <SectionHeading {...sectionHeading} alignment="center" />

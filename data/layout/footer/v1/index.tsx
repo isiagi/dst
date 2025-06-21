@@ -84,7 +84,7 @@ export const footerSectionData: FooterSectionProps = {
     ],
   },
   footerBottom: {
-    copyrightText: ' 2015 - 2025 Datahub Systems Technologies Ltd. ||',
+    copyrightText: '© 2015 - 2025 Datahub Systems Technologies Ltd.',
     links: [
       {
         label: 'Contact Us',

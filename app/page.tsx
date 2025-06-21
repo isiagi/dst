@@ -28,16 +28,16 @@ export default function Page() {
       {/* <TopNavBar /> */}
       <MainHeader version="1" />
       <Hero />
-      <ServiceSection {...serviceSectionData} />
+      <ServiceSection className="mb-[3.5rem]" {...serviceSectionData} />
       {/* <AboutSection /> */}
       <CtaSection />
       <ProjectSection {...projectSectionData} />
-      <StatisticsSection />
+      <StatisticsSection className="mb-[3.5rem]" />
       {/* <TestimonialSection /> */}
       {/* <PricingSection /> */}
       {/* <TeamSection /> */}
       {/* <ContactSection /> */}
-      <BlogSection />
+      <BlogSection className="mb-[3.5rem]" />
       <Footer />
     </>
   );
