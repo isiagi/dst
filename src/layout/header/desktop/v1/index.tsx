@@ -29,9 +29,7 @@ const actionIconClasses = cn(
 
 // Language options - you can expand this array
 const languages = [
-
   { code: 'sw', name: 'Kiswahili', flag: '🇹🇿' },
-
 
   { code: 'en', name: 'English', flag: '🇺🇸' },
 
@@ -298,7 +296,7 @@ export function Header() {
       {/* Main Header */}
       <header
         className={cn(
-          'left-0 right-0 z-99 mx-auto hidden w-full px-10 py-[26px] transition-all duration-300 ease-in-out lg:block',
+          'left-0 right-0 z-99 mx-auto hidden w-full py-[26px] transition-all duration-300 ease-in-out lg:block',
           shouldShowSticky
             ? cn(
                 'fixed top-0 w-full bg-white/90 backdrop-blur-md [box-shadow:0px_0px_15px_10px_rgba(64,174,241,.1)]',

@@ -72,7 +72,7 @@ export function Footer({ className }: SectionProps) {
   return (
     <footer
       className={cn(
-        'overflow-hidden bg-accent-100 px-20 text-accent-800 dark:bg-accent-900 dark:text-body',
+        'overflow-hidden bg-accent-100 text-accent-800 dark:bg-accent-900 dark:text-body',
         className
       )}
     >
