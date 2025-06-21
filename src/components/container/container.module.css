@@ -3,7 +3,7 @@
 */
 .container {
   /* local variable  */
-  --padding-x: 4.3rem;
+  --padding-x: 4.8rem;
   --padding-left: var(--padding-x);
   --padding-right: var(--padding-x);
   --padding: calc(var(--padding-left) + var(--padding-right));
