@@ -23,7 +23,7 @@ export function HeroSection({
   serviceImage,
 }: HeroSectionProps) {
   return (
-    <section className="section-padding-primary relative flex min-h-[450px] items-center">
+    <section className="section-padding-primary relative flex min-h-[450px] items-center px-20">
       {/* Background image  */}
       <Image
         priority
@@ -38,7 +38,7 @@ export function HeroSection({
       <span className="absolute inset-0 bg-gradient-1 from-white/0 to-white dark:from-accent-900/0 dark:to-accent-900"></span>
 
       <Container>
-        <div className="relative z-[4] flex flex-wrap items-center justify-between gap-x-20 gap-y-8 text-accent-900 dark:text-white lg:pt-[137px]">
+        <div className="relative z-[4] flex flex-wrap items-center justify-between gap-x-20 gap-y-8 text-accent-900 lg:pt-[137px] dark:text-white">
           <h1 className="font-secondary text-xl font-bold lg:w-1/2">{title}</h1>
           {breadcrumbItems && breadcrumbItems.length > 0 && (
             <Breadcrumb breadcrumbItems={breadcrumbItems} />

@@ -87,7 +87,7 @@ export function Footer({ className, footerTopClassName }: Props) {
         {/* Footer top  */}
         <div
           className={cn(
-            'flex items-center justify-between gap-x-20 gap-y-4 pb-5 pt-[60px] lg:pt-20',
+            'flex items-center justify-between gap-x-20 py-[1.5rem]',
             footerTopClassName
           )}
         >
@@ -113,7 +113,7 @@ export function Footer({ className, footerTopClassName }: Props) {
         </div>
 
         {/* Footer middle  */}
-        <div className="border-y border-accent-800 border-opacity-30 py-[60px] dark:border-accent-100 dark:border-opacity-30">
+        <div className="border-y border-accent-800 border-opacity-30 py-[3.5rem] dark:border-accent-100 dark:border-opacity-30">
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
             {/* Column one  */}
             <div data-aos="fade-up" data-aos-delay="200">
@@ -251,10 +251,11 @@ export function Footer({ className, footerTopClassName }: Props) {
         <div className="flex min-h-[90px] items-center">
           <Container>
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-10">
-              <p>{footerBottom.copyrightText}</p>
+              <p className="text-sm">{footerBottom.copyrightText}</p>
+              <p>|</p>
               {footerBottom.links && footerBottom.links.length > 0 && (
                 <nav aria-label="footer bottom navigation">
-                  <ul className="flex flex-wrap items-center gap-x-4  md:gap-x-7">
+                  <ul className="flex flex-wrap items-center gap-x-4  text-sm md:gap-x-7">
                     {footerBottom.links.map((link) => (
                       <li key={link.label} className="">
                         <CustomLink

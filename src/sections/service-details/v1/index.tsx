@@ -261,7 +261,7 @@ export function ServiceDetailsSection({
               laoreet augue mattis start fermentum start fermentum
             </p> */}
 
-            <div className="mt-2.5 grid grid-cols-[1fr_260px] gap-6">
+            <div className="mt-2.5 grid gap-6 md:grid-cols-[1fr_260px]">
               <div className="grid items-baseline gap-6 lg:gap-9">
                 {subsections.map((item: any) => (
                   <div key={item.heading}>

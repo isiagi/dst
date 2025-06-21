@@ -70,7 +70,10 @@ export function Header() {
 
             <div className="flex-1 divide-y divide-accent-900 divide-opacity-10 dark:divide-accent-200 dark:divide-opacity-10">
               <div className="flex items-center justify-between pl-9">
-                <ul aria-label="contact info" className="flex flex-wrap gap-8">
+                <ul
+                  aria-label="contact info"
+                  className="flex flex-wrap justify-between gap-1 pr-2"
+                >
                   <li className={addressItemClasses}>
                     <span className={addressIconParentClasses}>
                       <FaPhone />

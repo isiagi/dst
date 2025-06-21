@@ -76,7 +76,7 @@ export function Footer({ className }: SectionProps) {
         className
       )}
     >
-      <div className="py-16 md:py-20">
+      <div className="py-16 md:py-[3.5rem]">
         <Container>
           <div className="grid gap-10 md:grid-cols-2  xl:grid-cols-3">
             {/* About  */}
@@ -236,6 +236,9 @@ export function Footer({ className }: SectionProps) {
         <Container>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-10">
             <p className="text-sm">{footerBottom.copyrightText}</p>
+
+            <p>|</p>
+
             {footerBottom.links && footerBottom.links.length > 0 && (
               <nav aria-label="footer bottom navigation">
                 <ul className="flex flex-wrap items-center gap-x-4  md:gap-x-7">
