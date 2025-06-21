@@ -21,7 +21,9 @@ export function ProjectSection({
 }: ProjectSectionProps) {
   return (
     <section className="section-padding-primary overflow-hidden">
+
       <div className="mx-auto max-w-[1762px] px-2">
+
         <div className="mx-auto max-w-[630px]">
           <div data-aos="fade-up" data-aos-delay="100">
             <SectionHeading

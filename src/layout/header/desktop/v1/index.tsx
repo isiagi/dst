@@ -29,7 +29,9 @@ const actionIconClasses = cn(
 
 // Language options - you can expand this array
 const languages = [
+
   { code: 'sw', name: 'Kiswahili', flag: '🇹🇿' },
+
 
   { code: 'en', name: 'English', flag: '🇺🇸' },
 

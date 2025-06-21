@@ -72,7 +72,7 @@ export function Footer({ className }: SectionProps) {
   return (
     <footer
       className={cn(
-        'overflow-hidden bg-accent-100 text-accent-800 dark:bg-accent-900 dark:text-body',
+        'overflow-hidden bg-accent-100 px-20 text-accent-800 dark:bg-accent-900 dark:text-body',
         className
       )}
     >
@@ -236,7 +236,9 @@ export function Footer({ className }: SectionProps) {
         <Container>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-10">
             <p className="text-sm">{footerBottom.copyrightText}</p>
+
             <p>|</p>
+
             {footerBottom.links && footerBottom.links.length > 0 && (
               <nav aria-label="footer bottom navigation">
                 <ul className="flex flex-wrap items-center gap-x-4  md:gap-x-7">
