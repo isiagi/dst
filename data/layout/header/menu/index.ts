@@ -43,15 +43,15 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
       },
       {
         label: 'Support Plans',
-        href: '',
+        href: '/coming-soon/support-plans',
       },
       {
         label: 'Online Support',
-        href: '',
+        href: '/coming-soon/online-support',
       },
       {
         label: 'Feedback',
-        href: '',
+        href: '/coming-soon/feedback',
       },
     ],
   },
@@ -60,11 +60,11 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
     subMenuItems: [
       {
         label: 'Enterprise Partners',
-        href: '',
+        href: '/coming-soon/enterprise-partners',
       },
       {
         label: 'ICT Academy',
-        href: '',
+        href: '/coming-soon/ict-academy',
       },
     ],
   },
@@ -81,20 +81,20 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
       },
       {
         label: 'Trust Center',
-        href: '',
+        href: '/coming-soon/trust-center',
       },
       {
         label: 'Compliance & Integrity',
-        href: '',
+        href: '/coming-soon/compliance-integrity',
       },
 
       {
         label: 'Public Policy',
-        href: '',
+        href: '/coming-soon/public-policy',
       },
       {
         label: 'Innovations',
-        href: '',
+        href: '/coming-soon/innovations',
       },
       // {
       //   label: 'Careers',
@@ -107,7 +107,7 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
       },
       {
         label: 'News & Events',
-        href: '',
+        href: '/coming-soon/news-events',
       },
       // {
       //   label: 'Publication',
