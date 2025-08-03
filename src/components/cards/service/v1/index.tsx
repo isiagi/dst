@@ -33,7 +33,7 @@ export function ServiceCard({
     >
       {/* Background Overlay */}
 
-      {/* <div className="pointer-events-none absolute inset-0 z-0 bg-black/70 transition-all duration-300 group-hover/service:bg-black/85 dark:bg-black/50" /> */}
+      <div className="pointer-events-none absolute inset-0 z-0 bg-black/70 transition-all duration-300 group-hover/service:bg-black/85 dark:bg-black/50" />
 
       {/* Content goes here */}
       <div className="relative z-10 space-y-6">

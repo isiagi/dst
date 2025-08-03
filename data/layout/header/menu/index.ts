@@ -17,6 +17,10 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
         href: '/services/cybersecurity',
       },
       {
+        label: 'Web Development',
+        href: '/services/software-solutions',
+      },
+      {
         label: 'Data Analytics',
         href: '/services/data-analytics',
       },
@@ -80,28 +84,30 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
         href: '',
       },
       {
-        label: 'Innovations',
-        href: '',
-      },
-      {
-        label: 'Careers',
-        href: '',
-      },
-      {
         label: 'Compliance & Integrity',
         href: '',
       },
+
       {
         label: 'Public Policy',
         href: '',
       },
       {
-        label: 'News & Events',
+        label: 'Innovations',
         href: '',
       },
+      // {
+      //   label: 'Careers',
+      //   href: '',
+      // },
+
       {
         label: 'Knowledge Hub',
         href: '/blog',
+      },
+      {
+        label: 'News & Events',
+        href: '',
       },
       // {
       //   label: 'Publication',

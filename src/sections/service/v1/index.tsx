@@ -24,30 +24,13 @@ export function ServiceSection({ services, className }: ServiceSectionProps) {
       </div>
       <Container>
         {services && services.length > 0 && (
-          <div className="grid gap-6 md:grid-cols-12">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
             {services.map((service, index) => {
-              const isFirstRow = index < 2;
-
-              // Define span logic for large screens
-              const colSpanClass =
-                index === 0
-                  ? 'lg:col-span-5'
-                  : index === 1
-                    ? 'lg:col-span-7'
-                    : index === 2
-                      ? 'lg:col-span-7'
-                      : 'lg:col-span-5';
-
               return (
                 <div
                   key={index}
                   data-aos="fade-up"
                   data-aos-delay={getStaggeredDelay([200, 400, 600], index)}
-                  className={cn(
-                    'col-span-12', // full width on small screens
-                    'md:col-span-6', // half on medium screens
-                    colSpanClass // custom on large screens
-                  )}
                 >
                   <ServiceCard {...service} />
                 </div>

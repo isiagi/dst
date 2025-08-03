@@ -67,20 +67,20 @@ export function Navigation({ menuItems }: Pick<HeaderProps, 'menuItems'>) {
                   >
                     {menuItem.subMenuItems.length > 5 ? (
                       // Multi-column layout for more than 5 items
-                      <div className="flex">
+                      <div className="flex py-2">
                         {chunkArray(menuItem.subMenuItems, 5).map(
                           (chunk, columnIndex) => (
                             <div
                               key={columnIndex}
-                              className="w-[230px] border-r border-white/5 last:border-r-0"
+                              className="w-[200px] border-r border-white/5 last:border-r-0"
                             >
-                              <ul className="grid divide-y divide-white/5">
+                              <ul className="grid divide-y divide-white/5 ">
                                 {chunk.map((subMenuItem, itemIndex) => (
                                   <li key={itemIndex} className="leading-none">
                                     <CustomLink
                                       href={subMenuItem.href}
                                       openNewTab={subMenuItem.openNewTab}
-                                      className="flex min-h-[50px] items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-black transition-colors duration-200 hover:bg-primary hover:text-white  dark:text-white"
+                                      className="flex min-h-[40px] items-center  px-4   text-[15px] font-normal capitalize text-black transition-colors duration-200 hover:underline  dark:text-white"
                                     >
                                       {subMenuItem.label}
                                     </CustomLink>
@@ -93,13 +93,13 @@ export function Navigation({ menuItems }: Pick<HeaderProps, 'menuItems'>) {
                       </div>
                     ) : (
                       // Single column layout for 5 or fewer items
-                      <ul className="grid divide-y divide-white/5">
+                      <ul className="grid divide-y divide-white/5 py-2">
                         {menuItem.subMenuItems.map((subMenuItem, index) => (
                           <li key={index} className="leading-none">
                             <CustomLink
                               href={subMenuItem.href}
                               openNewTab={subMenuItem.openNewTab}
-                              className="flex min-h-[50px] items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-black transition-colors duration-200 hover:bg-primary hover:text-white  dark:text-white"
+                              className="flex min-h-[40px] items-center  px-4  text-[15px] font-normal capitalize text-black transition-colors duration-200 hover:underline  dark:text-white"
                             >
                               {subMenuItem.label}
                             </CustomLink>

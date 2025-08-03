@@ -62,14 +62,30 @@ export const serviceSectionData: ServiceSectionProps = {
   services: [
     {
       icon: <Icon1 />,
+      title: 'SAP B1 Implementation',
+      description:
+        'We specialize in SAP B1 implementation, providing tailored solutions to streamline your business processes and enhance operational efficiency.',
+      slug: '/services/software-solutions',
+      image:
+        'https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNvZnR3YXJlfGVufDB8fDB8fHww',
+    },
+    {
+      icon: <Icon1 />,
+      title: 'Addon Development',
+      description:
+        'We create custom add-ons for SAP B1, enhancing its functionality to meet your unique business requirements and improve user experience.',
+      slug: '/services/software-solutions',
+      image:
+        'https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNvZnR3YXJlfGVufDB8fDB8fHww',
+    },
+    {
+      icon: <Icon1 />,
       title: 'Application Development',
       description:
-
         'We design and develop custom software tailored to your needs—enhancing productivity, automating tasks, and solving real challenges.',
       slug: '/services/software-solutions',
       image:
         'https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNvZnR3YXJlfGVufDB8fDB8fHww',
-
     },
     {
       icon: <Icon3 />,
@@ -100,7 +116,6 @@ export const serviceSectionData: ServiceSectionProps = {
 
       slug: '/services/managed-services',
       image: '/assets/images/hero/hand.webp',
-
     },
     // {
     //   icon: <Icon5 />,
