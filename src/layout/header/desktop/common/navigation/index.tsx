@@ -80,7 +80,7 @@ export function Navigation({ menuItems }: Pick<HeaderProps, 'menuItems'>) {
                                     <CustomLink
                                       href={subMenuItem.href}
                                       openNewTab={subMenuItem.openNewTab}
-                                      className="flex min-h-[40px] items-center  px-4   text-[15px] font-normal capitalize text-black transition-colors duration-200 hover:underline  dark:text-white"
+                                      className="flex min-h-[40px] items-center  px-4   text-[15px] font-normal capitalize text-accent-900 transition-colors duration-200 hover:underline hover:decoration-primary   dark:text-white"
                                     >
                                       {subMenuItem.label}
                                     </CustomLink>

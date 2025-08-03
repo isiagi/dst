@@ -5,21 +5,22 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
     title: 'Products & Services',
     subMenuItems: [
       {
-        label: 'SAP B1 Implementation',
+        label: 'SAP Business One',
         href: '/services/software-solutions',
       },
       {
-        label: 'Addon Development',
+        label: 'SAP Addons',
+        href: '/services/software-solutions',
+      },
+      {
+        label: 'Software Development',
         href: '/services/software-solutions',
       },
       {
         label: 'Cybersecurity',
         href: '/services/cybersecurity',
       },
-      {
-        label: 'Web Development',
-        href: '/services/software-solutions',
-      },
+
       {
         label: 'Data Analytics',
         href: '/services/data-analytics',
@@ -34,13 +35,13 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
     title: 'Support',
     subMenuItems: [
       {
-        label: 'Call Us',
+        label: 'Contact Us',
         href: '/contact',
       },
-      {
-        label: 'Email Us',
-        href: '/contact',
-      },
+      // {
+      //   label: 'Email Us',
+      //   href: '/contact',
+      // },
       {
         label: 'Support Plans',
         href: '/coming-soon/support-plans',
@@ -49,10 +50,10 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
         label: 'Online Support',
         href: '/coming-soon/online-support',
       },
-      {
-        label: 'Feedback',
-        href: '/coming-soon/feedback',
-      },
+      // {
+      //   label: 'Feedback',
+      //   href: '/coming-soon/feedback',
+      // },
     ],
   },
   {

@@ -59,18 +59,18 @@ export const footerSectionData: FooterSectionProps = {
     title: 'Quick Access',
     links: [
       {
-        label: 'SAP B1 Implementation',
+        label: 'SAP Business One',
         href: '/coming-soon/sap-b1-implementation',
         openNewTab: false,
       },
       {
-        label: 'Addon Development',
+        label: 'SAP Addons',
         href: '/coming-soon/addon-development',
         openNewTab: false,
       },
       {
-        label: 'Application Development',
-        href: '/services/managed-services',
+        label: 'Software Development',
+        href: '/services/software-solutions',
         openNewTab: false,
       },
       {
