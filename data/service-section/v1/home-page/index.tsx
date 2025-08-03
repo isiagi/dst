@@ -67,7 +67,7 @@ export const serviceSectionData: ServiceSectionProps = {
         'We specialize in SAP B1 implementation, providing tailored solutions to streamline your business processes and enhance operational efficiency.',
       slug: '/services/software-solutions',
       image:
-        'https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNvZnR3YXJlfGVufDB8fDB8fHww',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0bh_i4KHF9AkiCy-EMnQ6F-4k18nS4FOOog&s',
     },
     {
       icon: <Icon1 />,
@@ -76,7 +76,7 @@ export const serviceSectionData: ServiceSectionProps = {
         'We create custom add-ons for SAP B1, enhancing its functionality to meet your unique business requirements and improve user experience.',
       slug: '/services/software-solutions',
       image:
-        'https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNvZnR3YXJlfGVufDB8fDB8fHww',
+        'https://5.imimg.com/data5/IOS/Default/2022/7/KL/TV/SY/74365486/product-jpeg-500x500.png',
     },
     {
       icon: <Icon1 />,

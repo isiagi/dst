@@ -22,7 +22,7 @@ export default function ComingSoonPage({
           <div className="mt-24 flex flex-col items-center justify-center py-16">
             <BrandLogo />
             <h1 className="h1 mb-4 mt-8 text-center text-primary">
-              {params.segments} Coming Soon
+              Coming Soon
             </h1>
             <p className="mb-8 max-w-xl text-center text-lg text-accent-800 md:text-xl dark:text-body">
               We are working hard to bring you something amazing. Stay tuned for
