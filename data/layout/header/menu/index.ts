@@ -5,7 +5,11 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
     title: 'Products & Services',
     subMenuItems: [
       {
-        label: 'Application Development',
+        label: 'SAP B1 Implementation',
+        href: '/services/software-solutions',
+      },
+      {
+        label: 'Addon Development',
         href: '/services/software-solutions',
       },
       {
@@ -96,13 +100,13 @@ export const menuItemsProps: HeaderProps['menuItems'] = [
         href: '',
       },
       {
-        label: 'DST Blog',
+        label: 'Knowledge Hub',
         href: '/blog',
       },
-      {
-        label: 'Publication',
-        href: '',
-      },
+      // {
+      //   label: 'Publication',
+      //   href: '',
+      // },
     ],
   },
 ];

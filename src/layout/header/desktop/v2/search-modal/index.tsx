@@ -50,7 +50,7 @@ export function SearchDropdown({
       <div className="fixed inset-0 z-[98]" onClick={() => setIsOpen(false)} />
 
       {/* Search Dropdown */}
-      <div className="dark:border-accent-600 absolute right-0 top-full z-[99] mt-2 w-80 rounded-lg border border-gray-200 bg-white shadow-lg dark:bg-accent-800">
+      <div className="dark:border-accent-600 absolute right-0 top-full z-[99] mt-2 w-80 rounded-lg border border-gray-200 bg-white shadow-lg ">
         {/* Search Input Section */}
         <div className="dark:border-accent-600 relative border-b border-gray-200 p-4">
           <div className="relative">
@@ -59,7 +59,7 @@ export function SearchDropdown({
               ref={inputRef}
               type="text"
               placeholder="Search..."
-              className="dark:border-accent-600 w-full rounded-md border border-gray-300 py-2 pl-10 pr-10 focus:border-primary focus:outline-none dark:bg-accent-900 dark:text-white dark:placeholder-gray-400"
+              className="w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-10 focus:border-[#40AEF1] focus:outline-none"
             />
             <button
               onClick={() => setIsOpen(false)}
@@ -72,7 +72,7 @@ export function SearchDropdown({
         </div>
 
         {/* Suggestions Section */}
-        <div className="p-4">
+        {/* <div className="p-4">
           <h3 className="mb-3 text-sm font-semibold text-gray-600 dark:text-gray-300">
             Quick Links
           </h3>
@@ -89,7 +89,7 @@ export function SearchDropdown({
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
     </>
   );

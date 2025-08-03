@@ -2,12 +2,12 @@ import './globals.css';
 import { Metadata } from 'next';
 import { primary, secondary } from '@/fonts';
 import { AOSInit } from '@/src/utils/aos';
-import { ScrollToTopButton } from '@/src/components/scroll-to-top';
+// import { ScrollToTopButton } from '@/src/components/scroll-to-top';
 import { cn } from '@/src/utils/shadcn';
 import { Toaster } from 'sonner';
 import { ThemeProvider } from '@/src/components/theme-provider';
 // import { ModeToggle } from '@/src/components/mode-toggle';
-import Script from 'next/script';
+// import Script from 'next/script';
 
 interface Props {
   children: React.ReactNode;
@@ -33,13 +33,13 @@ export default async function RootLayout({ children }: Props) {
     >
       <AOSInit />
       <body>
-        <Script
+        {/* <Script
           id="messenger-widget-b"
           src="https://cdn.botpenguin.com/website-bot.js"
           strategy="afterInteractive"
         >
           {`685685cca306b60e50548224,68568595c78c450f35f8c36a`}
-        </Script>
+        </Script> */}
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -61,7 +61,7 @@ export default async function RootLayout({ children }: Props) {
           closeButton
           visibleToasts={9}
         />
-        <ScrollToTopButton />
+        {/* <ScrollToTopButton /> */}
       </body>
     </html>
   );
