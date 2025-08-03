@@ -6,8 +6,8 @@ import { ServiceSection } from '@/src/sections/service/v1';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Techlab | Services',
-  description: 'Techlab - IT Solutions and Services React Nextjs Template',
+  title: 'Techlab - Services',
+  description: 'DST - Data meets Integrity',
 };
 
 export default function Page() {

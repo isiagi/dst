@@ -10,6 +10,15 @@ import { FaCircleCheck, FaPhone } from 'react-icons/fa6';
 
 const services: LinkProps[] = [
   {
+    label: ' SAP B1 Implementation',
+    href: '/services/software-solutions',
+  },
+
+  {
+    label: 'Addon Development',
+    href: '/services/software-solutions',
+  },
+  {
     label: 'Application Development',
     href: '/services/software-solutions',
   },

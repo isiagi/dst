@@ -149,9 +149,9 @@ export const dstServices = [
     imageStart:
       'https://plus.unsplash.com/premium_photo-1674669009418-2643aa58b11b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D',
     name: 'cybersecurity',
-    long: 'In today’s increasingly connected world, cybersecurity is more than just a layer of defense—it’s a critical foundation for business resilience. At DST, we provide comprehensive cybersecurity solutions designed to protect your organization’s data, systems, and reputation. From proactive threat detection and response to compliance management and access controls, our services cover every angle of digital risk. We work with you to understand your unique environment and tailor security strategies that evolve alongside emerging threats. With DST, you gain peace of mind knowing that your digital assets are safeguarded by trusted experts.',
+    long: 'In todays increasingly complex digital landscape, cyber attackers are deploying sophisticated methods to compromise systems and exfiltrate data. This often ends up in a dark web marketplace.',
     short:
-      'We protect your business from cyber threats with tailored security strategies, real-time monitoring, and compliance-ready solutions.',
+      'Our mission is to ensure your data, systems and overall business operations remain secure minimising the risk of financial loss and disruption. With a proactive and all-hands-on-deck approach, we provide robust protection to keep your business safe and resilient.',
     subsections: [
       {
         heading: 'Threat Detection & Prevention',
@@ -177,9 +177,9 @@ export const dstServices = [
     imageStart:
       'https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bWFuYWdlZCUyMHNlcnZpY2VzfGVufDB8fDB8fHww',
     name: 'managed-services',
-    long: 'DST’s Managed Services are built to give you full confidence in your IT operations. We provide proactive monitoring, routine maintenance, and expert support to keep your systems running smoothly—24/7. Whether it’s managing your network, handling data backups, or resolving end-user issues, we ensure everything works as expected without added complexity or cost. Our team becomes an extension of yours, working behind the scenes to minimize downtime, boost efficiency, and allow your team to focus on what they do best.',
+    long: 'At the heart of every engagement we have is a clear, well-defined objective that ensures we align with your quality standard. Our IT consulting and managed services are designed to give you full visibility into your systems while truly experiencing its potential so that you just don’t adopt technology but harness it. By exploring every possible scenario and outcomes, we mitigate risks before they arise therefore ensuring that you are empowered.',
     short:
-      'Reliable, round-the-clock IT support and maintenance that helps your business stay efficient, secure, and stress-free.',
+      'Your business success is our priority, and we are committed to delivering measurable value for your investment.',
     subsections: [
       {
         heading: 'Network Management',
@@ -205,7 +205,7 @@ export const dstServices = [
     imageStart:
       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGF0YXxlbnwwfHwwfHx8MA%3D%3D',
     name: 'data-analytics',
-    long: 'At DST, we turn your data into a strategic asset. Our data analytics solutions help you collect, store, analyze, and visualize data to uncover actionable insights. Whether it’s understanding customer behavior, optimizing operations, or forecasting trends, we make your data work harder for you. By using cutting-edge tools in data warehousing, machine learning, and visualization, we empower your teams to make smarter, faster decisions based on real evidence—not guesswork.',
+    long: 'With real-time access to accurate data, you gain the insights needed to make confident, informed decisions. We combine advanced analytics tools with deep domain expertise to collect, analyze, and interpret your data—turning information into strategic advantage.',
     short:
       'We transform complex data into clear insights that drive smarter, faster business decisions.',
     subsections: [
@@ -261,9 +261,9 @@ export const dstServices = [
     imageStart:
       'https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNvZnR3YXJlfGVufDB8fDB8fHww',
     name: 'software-solutions',
-    long: "Our software development team builds custom applications that solve real problems. From web apps to mobile platforms and enterprise systems, we design, develop, test, and support software that fits your goals and scales with your business. Using agile methodologies and modern tech stacks, we ensure fast delivery, clear communication, and solutions that feel tailor-made. Whether it's automating processes or creating new digital experiences, DST makes your ideas a reality.",
+    long: 'Let us embark on a journey together in automating your business processes. From requirements gathering through design and implementing and testing, we ensure that you are at the centre of every step we make.',
     short:
-      'We create powerful, tailored software that boosts efficiency and solves your unique business challenges.',
+      'Our goal is simple: to deliver a solution that matches your vision, exactly as you had imagined if from day one.',
     subsections: [
       {
         heading: 'Custom App Development',
