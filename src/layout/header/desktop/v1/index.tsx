@@ -202,7 +202,7 @@ export function Header() {
   return (
     <>
       {/* Top Navigation Bar */}
-      <div className="absolute left-0 right-0 top-0 z-[100] w-full bg-accent-100 bg-opacity-70 dark:bg-accent-700">
+      <div className="absolute left-0 right-0 top-0 z-[100] w-full  bg-accent-900 bg-opacity-70 dark:bg-accent-700">
         <Container>
           <div className="flex items-center justify-end">
             <div className="flex items-center gap-6 text-sm">
@@ -210,7 +210,7 @@ export function Header() {
               <div className="relative">
                 <button
                   onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
-                  className="flex items-center gap-2 rounded-md px-3 py-1 text-black/90 transition-colors duration-300 hover:bg-white/10 hover:text-[#40AEF1]"
+                  className="flex items-center gap-2 rounded-md px-3  text-white transition-colors duration-300 hover:bg-white/10 hover:text-[#40AEF1]"
                   aria-label="Language selector"
                 >
                   <FaGlobe className="text-sm" />
@@ -229,13 +229,13 @@ export function Header() {
                 {/* Language Dropdown */}
                 {isLangDropdownOpen && (
                   <div className="absolute right-0 top-full mt-1 min-w-[160px] rounded-lg border border-white/20 bg-white/95 shadow-lg backdrop-blur-md">
-                    <div className="py-2">
+                    <div className="">
                       {languages.map((language) => (
                         <button
                           key={language.code}
                           onClick={() => handleLanguageChange(language)}
                           className={cn(
-                            'flex w-full items-center gap-3 px-4 py-2 text-left text-sm transition-colors duration-200 hover:bg-primary/10',
+                            'flex w-full items-center gap-3 px-4 py-1 text-left text-sm transition-colors duration-200 hover:bg-primary/10',
                             selectedLanguage.code === language.code
                               ? 'bg-primary/5 text-primary'
                               : 'text-gray-700'
