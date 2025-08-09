@@ -1,8 +1,9 @@
 import { LinkProps } from '@/src/common-types';
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { IoClose } from 'react-icons/io5';
 import { FaMagnifyingGlass } from 'react-icons/fa6';
+import { searchContent } from '@/src/utils/search-index';
 
 const suggestions: LinkProps[] = [
   { href: '/about', label: 'About Us' },
@@ -19,6 +20,8 @@ export function SearchDropdown({
   setIsOpen: (v: boolean) => void;
 }) {
   const inputRef = useRef<HTMLInputElement>(null);
+  const [query, setQuery] = useState('');
+  const results = searchContent(query);
 
   // Focus input when dropdown opens
   useEffect(() => {
@@ -60,6 +63,8 @@ export function SearchDropdown({
               type="text"
               placeholder="Search..."
               className="w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-10 focus:border-[#40AEF1] focus:outline-none"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
             />
             <button
               onClick={() => setIsOpen(false)}
@@ -71,25 +76,35 @@ export function SearchDropdown({
           </div>
         </div>
 
-        {/* Suggestions Section */}
-        {/* <div className="p-4">
-          <h3 className="mb-3 text-sm font-semibold text-gray-600 dark:text-gray-300">
-            Quick Links
-          </h3>
-          <ul className="space-y-1">
-            {suggestions.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="block rounded-md px-3 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-accent-700"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div> */}
+        {/* Results Section */}
+        <div className="max-h-72 overflow-y-auto p-4">
+          {query && results.length === 0 && (
+            <div className="text-sm text-gray-500">No results found.</div>
+          )}
+          {results.length > 0 && (
+            <ul className="space-y-1">
+              {results.map((item, idx) => (
+                <li key={item.href + idx}>
+                  <Link
+                    href={item.href}
+                    className="block rounded-md px-3 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-accent-700"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <span className="font-semibold">{item.title}</span>
+                    {item.description && (
+                      <span className="block text-xs text-gray-500">
+                        {item.description}
+                      </span>
+                    )}
+                    <span className="block text-xs italic text-gray-400">
+                      {item.type}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
     </>
   );
