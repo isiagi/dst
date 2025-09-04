@@ -127,7 +127,7 @@ export function ServiceDetailsSection({
                   className="font-secondary text-md font-bold  transition-colors duration-300"
                   href="tel:+0032-1255-69874"
                 >
-                  +0032-1255-69874
+                  +254 104 757710
                 </a>
               </div>
             </div>
